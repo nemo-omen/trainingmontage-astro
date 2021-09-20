@@ -238,40 +238,36 @@ Now, create a directory `src/layouts` and in that directory we're going to creat
 mkdir src/layouts && touch src/layouts/MainLayout.astro
 ```
 
-[Layouts](https://docs.astro.build/core-concepts/layouts) are just regular Astro components. There's absolutely no difference between a layout and a regular component. Conceptually, though, the folks at Astro encourage us to separate layouts from components because they have a slightly different function. Layouts in Astro are conceptually similar to [layouts in 11ty](https://www.11ty.dev/docs/layouts/); they wrap other content.
+[Layouts](https://docs.astro.build/core-concepts/layouts) are just regular Astro components. There's absolutely no difference between a layout and a regular component. Conceptually, though, the folks at Astro encourage us to separate layouts from components because they have a slightly different function. Layouts in Astro are conceptually similar to [layouts in 11ty](https://www.11ty.dev/docs/layouts/) — they wrap other content.
 
 Open up `src/layouts/MainLayout.astro` and put the following inside:
 
 ```astro
 ---
 let title = 'AstroBlog';
----
-
----
-let title = 'AstroBlog';
 const thisYear = new Date().toLocaleDateString("en-US", {year: 'numeric'});
 ---
 
-  <html>
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width">
-      <link rel="stylesheet" href="/style/global.css">
-      <title>{title}</title>
-    </head>
-    <body>
-      <header>
-        <h1>
-          <a href="/">{title}</a>
-        </h1>
-      </header>
-      <main>
-        <slot />
-      </main>
-      <footer>
-        <p>&copy {thisYear} Some Dev Somewhere</p>
-      </footer>
-    </body>
-  </html>
-
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/style/global.css">
+    <title>{title}</title>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="/">{title}</a>
+      </h1>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <p>&copy {thisYear} Some Dev Somewhere</p>
+    </footer>
+  </body>
+</html>
 ```
+
