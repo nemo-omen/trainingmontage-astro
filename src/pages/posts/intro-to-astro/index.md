@@ -7,7 +7,7 @@ layout: ../../../layouts/BlogLayout.astro
 id: ff9b0d5e-3b7a-4484-8b64-eac12710fea5
 ---
 
-Astro is a component-based static-site builder that not only promises to ship no JavaScript to the browser by default, but also allows you to use components from [React, Svelte, Vue, and Preact](https://docs.astro.build/reference/renderer-reference) out of the box.
+Astro is a component-based static site builder that not only promises to ship no JavaScript to the browser by default, but also allows you to use components from [React, Svelte, Vue, and Preact](https://docs.astro.build/reference/renderer-reference) out of the box.
 
 By default, Astro will render these components to HTML at build time, but you can also [partially hydrate](https://docs.astro.build/core-concepts/component-hydration) those components if you need some client-side JavaScript. The good Astro contributors even made it incredibly easy to control when the JavaScript is loaded with [directives](https://docs.astro.build/core-concepts/component-hydration#hydrate-interactive-components). You can even choose to hydrate your component with media queries.
 

@@ -102,6 +102,7 @@ blockquote {
 }
 
 pre {
+  margin-top: var(--size-700) !important;
   font-size: clamp(1rem, 2vw, 1.3rem);
 }
 
