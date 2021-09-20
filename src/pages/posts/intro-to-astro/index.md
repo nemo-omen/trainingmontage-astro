@@ -104,7 +104,7 @@ Once the CLI is finished copying files, you need to install them.
 pnpm install
 ```
 
-And that's it for installation! Let's take a look at the project files. Open your roject directory in your favorite editor. I use VS Code.
+And that's it for installation! Let's take a look at the project files. Open your project directory in your favorite editor. I use VS Code.
 
 ```bash
 code .
