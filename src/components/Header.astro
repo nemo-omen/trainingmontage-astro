@@ -1,0 +1,90 @@
+---
+
+---
+
+<header>
+<div id="header-main">
+  <h1 id="site-home">
+    <a href="/">
+      TrainingMontage
+    </a>
+  </h1>
+  <p id="site-tagline">web-dev / Writing</p>
+</div>
+<nav>
+  <a href="/">Home</a>
+  <a href="/about">About</a>
+</nav>
+</header>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: clamp(1rem, 2vw, 2rem);
+  }
+
+  nav {
+    display: flex;
+    gap: 4rem;
+  }
+
+  #site-home a {
+    font-size: clamp(var(--size-500), 5vw, var(--size-900));
+    font-weight: 900;
+    letter-spacing: 0.125em;
+  }
+
+  #site-home a {
+    text-decoration: none;
+  }
+
+  #site-home a:hover {
+    text-decoration: none;
+  }
+
+  #site-tagline {
+    font-weight: 500;
+    font-size: clamp(var(--size-400), 2vw, var(--size-600));
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-inline: 1rem;
+  }
+
+  #header-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: min(100%, 68ch);
+    font-size: clamp(2rem, -0.4742rem + 6.1856vw, 2.75rem);
+  }
+
+  a {
+    font-weight: 700;
+    font-size: var(--size-500);
+    text-underline-offset: 0.25em;
+  }
+
+  @media (max-width: 950px) {
+    header {
+      flex-direction: column;
+      gap: 2rem;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    #header-main {
+      justify-content: center;
+    }
+
+    #site-home {
+      text-align: center;
+    }
+
+    #site-tagline {
+      text-align: center;
+    }
+  }
+</style>

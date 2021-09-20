@@ -1,0 +1,96 @@
+---
+  import BaseHeadLayout from '../layouts/BaseHeadLayout.astro';
+  import BlogHeadLayout from '../layouts/BlogHeadLayout.astro';
+  import PageLayout from '../layouts/PageLayout.astro';
+  // import './prism-coldark-dark.css';
+  import './prism-nord.css';
+  
+  const { content } = Astro.props;
+
+  const permalink = 'https://trainingmontage.dev/posts/' + slugify(content.title);
+
+  function slugify(str) {
+    return str.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '').split(' ').join('-');
+  }
+---
+<BaseHeadLayout title={content.title}>
+  <BlogHeadLayout
+    title={content.title} 
+    description={content.description}
+    permalink={permalink}
+  />
+</BaseHeadLayout>
+
+<PageLayout>
+<article class="post flow">
+  <section class="post-header flow">
+    <h2 class="post-title">{content.title}</h2>
+    <time>
+      {
+        new Date(content.date)
+          .toLocaleDateString(
+            "en-US",
+            {
+              weekday: 'long', 
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+              }
+          )
+        }
+    </time>
+    <ul class="tags-list">
+      {content.tags.map((tag) => <li class="tag">{tag}</li>)}
+    </ul>
+  </section>
+  <section class="post-content flow">
+    <slot/>
+  </section>
+</article>
+</PageLayout>
+
+<style>
+  .post {
+    --flow-space: var(--size-700);
+  }
+
+  .post-header {
+    --flow-space: var(--size-400);
+  }
+
+  .post-title {
+    font-size: var(--size-800);
+    color: var(--color-link);
+  }
+
+  .post time {
+    --flow-space: var(--size-400);
+    display: block;
+    font-size: var(--size-500);
+    letter-spacing: 0.1em;
+  }
+
+  .post :is(h2, h3) {
+    --flow-space: var(--size-900);
+  }
+
+  .post :is(h2, h3) + * {
+    --flow-space: var(--size-400);
+  }
+
+  .post figure,
+  .post figure + * {
+    --flow-space: var(--size-900);
+  }
+
+  .tags-list {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    gap: var(--size-600);
+  }
+
+  .tag::before {
+    content: '#';
+  }
+</style>

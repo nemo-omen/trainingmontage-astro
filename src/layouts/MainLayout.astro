@@ -1,0 +1,16 @@
+---
+import BaseHeadLayout from '../layouts/BaseHeadLayout.astro';
+import PageLayout from '../layouts/PageLayout.astro';
+import Header from '../components/Header.astro';
+
+let title = 'trainingmontage — writing and web development';
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+<html lang="en">
+    <BaseHeadLayout title={title} />
+    <PageLayout>
+        <slot />
+    </PageLayout>
+</html>

@@ -1,0 +1,16 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import BlogPreview from '../components/BlogPreview.astro';
+let allPosts = Astro.fetchContent('./posts/*/*.md');
+allPosts = allPosts.sort((a,b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
+---
+
+<MainLayout>
+    <section class="post-list flow">
+        {allPosts.map((post) => <BlogPreview post={post} />)}
+    </section>
+</MainLayout>
+
+<style>
+    
+</style>

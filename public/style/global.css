@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  font-size: 1rem;
+  --user-font-scale: 1rem - 16px;
+  /* font-size: clamp(0.875rem, 0.4626rem + 1.0309vw + var(--user-font-scale), 1.125rem); */
+
+    /* HEX COLORS */
+    --rich-black-fogra-29: #001219ff;
+    --whitish: #eafbff;
+    --pacific-blue: #47a8bdff;
+    --key-lime: #edf67dff;
+    --dogwood-rose: #cc3363ff;
+    --bittersweet: #ff6663ff;
+    
+    /* HSL COLORS */
+    --hsla-rich-black-fogra-29: hsla(197, 100%, 5%, 1);
+    --hsla-whitish: #d4f7ff;
+    --hsla-pacific-blue: hsla(191, 47%, 51%, 1);
+    --hsla-key-lime: hsla(64, 87%, 73%, 1);
+    --hsla-dogwood-rose: hsla(341, 60%, 50%, 1);
+    --hsla-bittersweet: hsla(1, 100%, 69%, 1);
+    
+    /* RAW RGB COLORS */
+    --rgb-rich-black-fogra-29: 0, 18, 25;
+    --rgb-whitish: 212, 247, 255;
+    --rgb-pacific-blue: 71, 168, 189;
+    --rgb-key-lime: 237, 246, 125;
+    --rgb-dogwood-rose: 204, 51, 99;
+    --rgb-bittersweet: 255, 102, 99;
+  
+    /* DOC-LEVEL COLOR VARS */
+    --primary-dark: var(--rich-black-fogra-29);
+    --rgb-primary-dark: var(--rgb-rich-black-fogra-29);
+    --primary-light: var(--whitish);
+    --rgb-primary-light: var(--rgb-whitish);
+    --primary-dark-02: rgb(var(--rgb-rich-black-fogra-29), 0.05);
+    --primary-light-02: rgb(var(--rgb-whitish), 0.05);
+    --primary-dark-01: rgb(var(--rgb-rich-black-fogra-29), 0.025);
+    --primary-light-03: rgb(var(--rgb-whitish), 0.1);
+
+    --color-fg: var(--primary-dark);
+    --rgb-color-fg: var(--rgb-primary-dark);
+    --color-bg: var(--primary-light);
+    --rgb-color-bg: var(--rgb-primary-light);
+
+    --color-muted-highlight: var(--primary-dark-02);
+    --color-link: var(--dogwood-rose);
+    --color-link: var(--bittersweet);
+    --color-hover: var(--pacific-blue);
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-fg);
+  display: flex;
+  flex-direction: column;
+}
+
+header, main {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.post-preview, .post, #about {
+  max-width: 90%;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+footer {
+  margin-top: auto;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  max-width: 70%;
+  border-top: 1px solid rgb(var(--rgb-color-fg), 0.4);
+  margin-inline: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: var(--primary-dark);
+    --color-fg: var(--primary-light);
+    --color-muted-highlight: var(--primary-light-02);
+    --color-hover: var(--bittersweet);
+    --color-link: var(--pacific-blue);
+    --rgb-color-fg: var(--rgb-primary-light);
+    --rgb-color-bg: var(--rgb-primary-dark);
+    /* --color-link: var(--pacific-blue);
+    --color-hover: var(--dogwood-rose); */
+    /* --color-bg: var(--primary-light);
+    --color-fg: var(--primary-dark); */
+  }
+  pre {
+    background-color: rgb(var(--rgb-whitish), 0.04) !important;
+  }
+
+}
+@media (prefers-color-scheme: light) {
+  pre {
+    background-color: rgb(var(--rgb-rich-black-fogra-29), 0.9) !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  header, main {
+    max-width: 70vw;
+  }
+}
+
+@media (max-width: 850px) {
+  header, main {
+    width: 90%;
+  }
+}
+
+@media (max-width: 550px) {
+  header, main {
+    max-width: 95vw;
+  }
+
+  .post-preview, .post, #about {
+    max-width: 100%;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+}

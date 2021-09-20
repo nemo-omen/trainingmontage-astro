@@ -1,0 +1,49 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout>
+  <section id="about">
+    <p class="big">
+      Hi,
+    </p>
+
+    <p style="text-indent: 1rem;">
+      I'm <a href="https://twitter.com/trainingm0ntage" class="me">Jeff Caldwell</a>, a writer, web-developer, and student. I work full-time as a <a href="https://jeffcaldwell.news">digital journalist</a> in small-city local news. I also go to school full-time(ish) for computer science.
+    </p>
+
+    <p>
+      When I'm not at work or studying, I like to make cool things for the web. I also like to write about what I'm learning. You'll find most of my thoughts and ongoing writing projects on this site. I'll try to keep it updated regularly, but, you know, I can't make any promises.
+    </p>
+
+    <p>Glad you're here!</p>
+
+    <p class="big">
+      <a href="https://jeffcaldwell.dev">Jeff</a>
+    </p>
+  </section>
+</MainLayout>
+
+<style>
+
+  #about > * + * {
+    margin-top: var(--size-700);
+  }
+
+  p:not(.big) {
+    padding-inline: 1rem;
+  }
+
+  .me {
+    display: inline;
+  }
+
+  .big {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .big a {
+    text-decoration: none;
+  }
+</style>

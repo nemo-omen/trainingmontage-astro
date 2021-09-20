@@ -1,0 +1,15 @@
+---
+const thisYear = new Date().toLocaleDateString("en-US", {year: 'numeric'});
+---
+
+<footer>
+  <p>&copy; {thisYear} Jeff Caldwell</p>
+</footer>
+
+<style>
+  footer {
+    padding: 4rem 4rem 2rem 4rem;
+    display: flex;
+    justify-content: center;
+  }
+</style>

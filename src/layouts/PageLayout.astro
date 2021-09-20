@@ -1,0 +1,14 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<body>
+    <Header />
+    <div id="content">
+        <main>
+          <slot />
+        </main>
+    </div>
+    <Footer />
+</body>
