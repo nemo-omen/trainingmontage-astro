@@ -211,10 +211,10 @@ Don't get too hung up on this page for now, though, we're about to make our own.
 
 Actually, first we need to destroy. 
 
-Delete `components/Tour.astro`.
+Delete `src/components/Tour.astro` and `public/style/home.css`.
 
 ```bash
-rm src/components/Tour.astro
+rm src/components/Tour.astro public/style/home.css
 ```
 
 Then, open up `pages/index.astro` and replace everything inside with:
