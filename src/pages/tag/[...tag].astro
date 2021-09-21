@@ -23,7 +23,7 @@
 
   }
 ---
-<MainLayout>
+<MainLayout title={"posts tagged" + tag}>
   <section class="post-list flow">
         {posts.map((post) => <BlogPreview post={post} />)}
     </section>
