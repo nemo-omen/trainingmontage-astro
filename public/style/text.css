@@ -175,6 +175,36 @@ h3 {
   color: var(--color-hover);
 }
 
+.tags-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  gap: var(--size-700);
+}
+
+.tag::before {
+  content: '# ';
+  color: var(--color-link);
+  transition: color 0.3s ease-in-out;
+}
+
+.tag-item {
+  display: inline-block;
+}
+
+.tag {
+  color: var(--color-link);
+  text-decoration: none;
+}
+.tag:hover {
+  color: var(--color-hover);
+}
+.tag:hover::before {
+  color: var(--color-hover);
+}
+
 @media (prefers-color-scheme: light) {
   a {
     text-decoration: underline;

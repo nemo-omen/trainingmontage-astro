@@ -25,7 +25,6 @@
 <article class="post flow">
   <section class="post-header flow">
       <h2 class="post-title">{content.title}</h2>
-      <div class="post-subhead">
       <time>
         {
           new Date(content.date)
@@ -46,7 +45,6 @@
             <a href={"/tag/" + tag} class="tag">{tag}</a>
           </li>)}
       </ul>
-    </div>
   </section>
   <section class="post-content flow">
     <slot/>
@@ -91,26 +89,5 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  .tags-list {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    padding: 0;
-    gap: var(--size-500);
-  }
-
-  .tags-list::before {
-    content: '#';
-    font-size: 1.5rem;
-    color: var(--color-link);
-  }
-
-  .tag {
-    color: var(--color-link);
-  }
-  .tag:hover {
-    color: var(--color-hover);
   }
 </style>

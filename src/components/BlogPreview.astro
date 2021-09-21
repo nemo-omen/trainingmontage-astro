@@ -26,6 +26,9 @@ function slugify(str) {
               }
           )
         }</time>
+        <ul class="tags-list">
+          {post.tags.map((tag) => <li class="tag=item"><a class="tag" href={"/tag/" + tag}>{tag}</a></li>)}
+        </ul>
       </div>
     <div class="post-preview-body">
       <p>{post.description}</p>
@@ -35,6 +38,12 @@ function slugify(str) {
 <style>
   .post-preview > * + *{
     margin-top: var(--size-400);
+  }
+
+  .post-preview-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   a.post-item-link {
