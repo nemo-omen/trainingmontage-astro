@@ -42,8 +42,8 @@
       </time>
       <ul class="tags-list">
         {content.tags.map(
-          (tag) => <li class="tag">
-            <a href="#">{tag}</a>
+          (tag) => <li class="tag-item">
+            <a href={"/tag/" + tag} class="tag">{tag}</a>
           </li>)}
       </ul>
     </div>
@@ -91,6 +91,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 60ch;
   }
 
   .tags-list {
@@ -98,12 +99,19 @@
     display: flex;
     align-items: center;
     padding: 0;
-    gap: var(--size-600);
+    gap: var(--size-500);
   }
 
   .tags-list::before {
     content: '#';
     font-size: 1.5rem;
-    color: var(--pacific-blue);
+    color: var(--color-link);
+  }
+
+  .tag {
+    color: var(--color-link);
+  }
+  .tag:hover {
+    color: var(--color-hover);
   }
 </style>

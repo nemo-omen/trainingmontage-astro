@@ -1,0 +1,14 @@
+---
+  
+  export async function getStaticPaths() {
+    const { tag } = await Astro.request.params;
+    console.log("Your tag: ", tag);
+    const allPosts = Astro.fetchContent('../posts/*/*.md');
+    const postsWithTag = allPosts.filter((post) => post.tags.includes(tag));
+    return [
+      {params: {tag}}
+    ];
+  }
+---
+
+  <h2>Hey, a post list page for tags!</h2>
