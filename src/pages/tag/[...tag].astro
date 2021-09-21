@@ -1,0 +1,30 @@
+---
+  import MainLayout from '../../layouts/MainLayout.astro';
+  import BlogPreview from '../../components/BlogPreview.astro';
+  const { tag } = Astro.request.params;
+  const { posts } = Astro.props;
+
+  export async function getStaticPaths() {
+    const posts = Astro.fetchContent('../**/*.md');
+    posts.sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
+
+    const tags = new Set();
+
+    for (const post of posts) {
+      for (const tag of post.tags) {
+        tags.add(tag);
+      }
+    }
+
+    return [...tags].map((tag) => ({
+      params: { tag },
+      props: { posts: posts.filter((post) => post.tags.includes(tag)) },
+    }));
+
+  }
+---
+<MainLayout>
+  <section class="post-list flow">
+        {posts.map((post) => <BlogPreview post={post} />)}
+    </section>
+</MainLayout>
