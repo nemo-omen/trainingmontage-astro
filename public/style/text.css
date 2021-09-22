@@ -197,6 +197,7 @@ h3 {
 .tag {
   color: var(--color-link);
   text-decoration: none;
+  font-size: var(--size-400);
 }
 .tag:hover {
   color: var(--color-hover);
