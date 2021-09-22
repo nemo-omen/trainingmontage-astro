@@ -142,7 +142,6 @@ h3 {
 
 .note, .warn {
   display: flex;
-  /* justify-content: flex-start; */
   align-items: center;
   background-color: var(--color-muted-highlight);
   padding: 1rem;
@@ -168,11 +167,14 @@ h3 {
 }
 
 .note a, .warn a {
-  color: var(--color-fg);
+  color: inherit;
 }
 
-.note a:hover, .warn a:hover {
-  color: var(--color-hover);
+.note a:hover,
+.warn a:hover,
+.note a:visited,
+.warn a:visited {
+  color: inherit;
 }
 
 .tags-list {
