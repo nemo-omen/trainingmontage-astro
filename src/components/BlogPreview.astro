@@ -27,7 +27,7 @@ function slugify(str) {
           )
         }</time>
         <ul class="tags-list">
-          {post.tags.map((tag) => <li class="tag=item"><a class="tag" href={"/tag/" + tag}>{tag}</a></li>)}
+          {post.tags.map((tag) => <li class="tag=item"><a class="post-tag" href={"/tag/" + tag}>{tag}</a></li>)}
         </ul>
       </div>
     <div class="post-preview-body">

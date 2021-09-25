@@ -186,7 +186,7 @@ h3 {
   gap: var(--size-700);
 }
 
-.tag::before {
+.post-tag::before {
   content: '# ';
   color: var(--color-link);
   transition: color 0.3s ease-in-out;
@@ -196,15 +196,15 @@ h3 {
   display: inline-block;
 }
 
-.tag {
+.post-tag {
   color: var(--color-link);
   text-decoration: none;
   font-size: var(--size-400);
 }
-.tag:hover {
+.post-tag:hover {
   color: var(--color-hover);
 }
-.tag:hover::before {
+.post-tag:hover::before {
   color: var(--color-hover);
 }
 
