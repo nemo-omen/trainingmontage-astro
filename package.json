@@ -12,6 +12,7 @@
     "astro": "^0.20.7"
   },
   "dependencies": {
-    "@astrojs/renderer-svelte": "^0.1.2"
+    "@astrojs/renderer-svelte": "^0.1.2",
+    "motion": "^10.0.1"
   }
 }
