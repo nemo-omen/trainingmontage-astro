@@ -68,9 +68,11 @@ header, main {
 }
 
 .post-preview, .post, #about {
-  max-width: 90%;
-  margin-inline: auto;
-  padding-inline: 1.5rem;
+  max-width: 70%;
+  /* max-width: 90%; */
+  /* margin-inline: auto; */
+  margin-inline: var(--size-700);
+  /* padding-inline: 1.5rem; */
 }
 
 footer {

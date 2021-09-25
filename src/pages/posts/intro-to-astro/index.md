@@ -13,6 +13,8 @@ By default, Astro will render these components to HTML at build time, but you ca
 
 Let's build a simple blog and check out what makes Astro so powerful.
 
+---
+
 <div class="note">
 
 The full code for this tutorial is at [this repository](https://github.com/nemo-omen/astro-example-blog).
@@ -21,7 +23,7 @@ The full code for this tutorial is at [this repository](https://github.com/nemo-
 
 <div class="note">
 
-This tutorial makes use of Linux/Mac terminal commands. Don't know how to use that? [Check this out.](https://www.learnenough.com/command-line-tutorial)
+This tutorial makes use of Linux/Mac terminal commands.<br>Don't know how to use that? [Check this out.](https://www.learnenough.com/command-line-tutorial)
 
 </div>
 
