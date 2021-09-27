@@ -7,13 +7,6 @@ main {
   order: 2;
 }
 
-aside {
-  order: 1;
-  /* background-color: var(--color-muted-highlight); */
-  border: 1px solid var(--color-muted-highlight);
-  padding: 1rem;
-}
-
 @media (max-width: 768px) {
   #content {
     display: flex;

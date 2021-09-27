@@ -1,0 +1,41 @@
+.post {
+  --flow-space: var(--size-700);
+}
+
+.component-post {
+  margin-inline: var(--size-700);
+}
+
+.post-header {
+  --flow-space: var(--size-400);
+}
+
+.post-title {
+  font-size: var(--size-800);
+  color: var(--color-link);
+}
+
+.post time {
+  --flow-space: var(--size-400);
+  display: block;
+  font-size: var(--size-500);
+  letter-spacing: 0.1em;
+}
+
+.post :is(h2, h3) {
+  --flow-space: var(--size-900);
+}
+
+.post :is(h2, h3) + * {
+  --flow-space: var(--size-400);
+}
+
+.post figure,
+.post figure + * {
+  --flow-space: var(--size-900);
+}
+.post-subhead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

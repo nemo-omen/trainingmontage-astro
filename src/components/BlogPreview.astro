@@ -1,6 +1,6 @@
 ---
 const post = Astro.props.post;
-const link = "/posts/" + slugify(post.title);
+const link = post.root ? `/${post.root}/${slugify(post.title)}` : `/posts/${slugify(post.title)}`;
 
 function slugify(str) {
   return str.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '').split(' ').join('-');
