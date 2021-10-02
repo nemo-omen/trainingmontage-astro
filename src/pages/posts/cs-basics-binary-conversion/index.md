@@ -15,7 +15,7 @@ It turns out "when I really needed to" passed some time before my second exam in
 
 The test itself was supposed to cover recursion and function templates in C++. Imagine my surprise and horror when 10 of the 40 questions asked us to convert numbers from decimal to different bases.
 
-You can only imagine my horror and my frustration with myself. I was completely unprepared to even tackle the most basic of the questions and failed the exam miserably.
+I was completely unprepared to even tackle the most basic of the questions and failed the exam miserably.
 
 So, I'm going to go through these base conversions and learn them properly. 
 
