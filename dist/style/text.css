@@ -106,7 +106,7 @@ pre {
   font-size: clamp(1rem, 2vw, 1.3rem);
 }
 
-code:not(pre) {
+code:not(pre), .highlight {
   display: inline-block;
   color: var(--bittersweet);
   padding: 0.125rem 0.25rem;
