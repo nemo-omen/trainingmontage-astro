@@ -29,7 +29,7 @@ Take the number `555` as an example. We think of that as a three-digit number, e
 
 Remember grade school? Remember how our teachers walked us through those digit places back in the day? Ones, Tens, Hundreds, etc? Turns out that's all pretty important when you try to understand number systems.
 
-What you have with the number <span class="highlight">555 = 500 + 50 + 5</span>.
+What you have with the number `555` is <span class="highlight">555 = 500 + 50 + 5</span>.
 
 We could also say <span class="highlight">555 = (5 * 100) + (5 * 10) + (5 * 1)</span>.
 
@@ -68,9 +68,9 @@ That's essentially the logic every other numeral system we'll be covering works.
 
 Let's start with binary and work our way up.
 
-## Binary (Base 2)
+## Binary (Base-2)
 
-We know each slot in binary represents a power of 2. Just like with base-10, each of those slots begins with `0`. Since our base 2, that means the only other available number for a slot is `1`. In each slot, a `1` means that number is present. A `0` means the number is not present.
+We know each slot in binary represents a power of 2. Just like with base-10, each of those slots begins with `0`. Because our base is 2, the only other available number for a slot is `1`. In each slot, a `1` means that number is present. A `0` means the number is not present.
 
 Let's look at what that means in a table with no specific number to write.
 
@@ -78,7 +78,7 @@ Let's look at what that means in a table with no specific number to write.
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 |      16       |        8      |       4       |       2       |       1       |
 
-Okay, now let's break down a couple of simple numbers inside this table to see what binary's all about.
+Okay, now let's break down a couple of simple numbers with tables to see what binary is all about.
 
 ### 0<sub>2</sub>
 
@@ -98,7 +98,7 @@ __Binary: 0__
 | - | - | - | - | - |
 |  |  |  |  | 1 |
 
-Also probably not much of a surprise!
+Also probably not much of a surprise.
 
 __Decimal: 1__
 
@@ -156,7 +156,7 @@ __Decimal: 8__
 
 __Binary: 1000__
 
-Hopefully, you see how this is progressing. If not, go back to where I mentioned subtracting the largest power multiple you can from your base 10 number and then moving downward from there. Let's try a slightly larger number and work through it so it's plain to see how it works.
+Hopefully, you see how this is progressing. If not, go back to where I mentioned subtracting the largest power multiple you can from your base-10 number and moving downward from there. Let's try a slightly larger number and work through it so it's plain to see how it works.
 
 ### 100<sub>2</sub>
 
@@ -168,7 +168,7 @@ Now we move to `36`. The largest number that's a square of 2 that can be subtrac
 
 `36 - 32 = 4`
 
-And that lands us in a good spot because `4` is 2<sup>2</sup>.
+And that lands us in a good spot because `4` is <span class="highlight">2<sup>2</sup></span>.
 
 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
 | - | - | - | - | - | - | - |
@@ -178,9 +178,9 @@ __Decimal: 100__
 
 __Binary: 1100100__
 
-Pretty simple, right? Here's a basic binary multiplication table (yes, I skip a lot of in-between values, but this should be enough to help you understand what's happening). 
+Pretty simple, right? Here's a basic binary multiplication table (I skip a lot of in-between values, but this should be enough to help you understand what's happening). 
 
-After that, we'll move on to some other numeral systems and apply what we know. (I'm just going to use tables for these to keep it simple).
+After that, we'll move on to some other numeral systems and apply what we know.
 
 |  | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
 | - | - | - | - | - | - | - | - |
@@ -197,7 +197,7 @@ After that, we'll move on to some other numeral systems and apply what we know. 
 
 ## Quaternary (Base 4)
 
-Now we have 4 values in each slot (0 - 3).
+We can have 4 values in each slot (0 - 3).
 
 |  | 256 | 64 | 16 | 4 | 1 |
 | - | - | - | - | - | - |
