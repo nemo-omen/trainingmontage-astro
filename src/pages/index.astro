@@ -1,9 +1,7 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import BlogPreview from '../components/BlogPreview.astro';
-import ChallengePosts from './challenges/posts.js';
 let mdPosts = Astro.fetchContent('./posts/*/*.md');
-// let allPosts = [...mdPosts, ...ChallengePosts];
 let allPosts = [...mdPosts];
 allPosts = allPosts.sort((a,b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
 ---
