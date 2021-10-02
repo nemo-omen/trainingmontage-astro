@@ -45,4 +45,178 @@ Let's try `679`:
 
 | 679 | 6 | 7 | 9 |
 | --- | --- | --- | --- |
-| or | 6 | 7 | 9 |
+| or | 600 | 70 | 9 |
+| or | 6 * 100 | 7 * 10 | 9 * 1 |
+| or | 6 * 10<sup>2</sup> | 7 * 10<sup>1</sup> | 9 * 10<sup>0</sup> |
+
+Do you see what's happening here? Each of the slots (digits) in our number systems is a power of 10, with the lowest power all the way to the right. The power of 10 we multiply by increases by one with each slot we move to from there.
+
+Another way to think about breaking down these numbers into their constituent parts is by subtracting the number that fits into the largest slot, then moving on to the next largest, and so on, until you're at 10<sub>0</sub>.
+
+So.
+
+`679 - 600 = 79 - 70 = 9`
+
+That's essentially the logic every other numeral system we'll be covering works. With binary, each slot is a power of 2. Quaternary? That's a power of 4.
+
+Let's start with binary and work our way up.
+
+## Binary (Base 2)
+
+We know each slot in binary represents a power of 2. Just like with base-10, each of those slots begins with `0`. Since our base 2, that means the only other available number for a slot is `1`. In each slot, a `1` means that number is present. A `0` means the number is not present.
+
+Let's look at what that means in a table with no specific number to write.
+
+| 2<sup>4</sup> | 2<sup>3</sup> | 2<sup>2</sup> | 2<sup>1</sup> | 2<sup>0</sup> |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+|      16       |        8      |       4       |       2       |       1       |
+
+Okay, now let's break down a couple of simple numbers inside this table to see what binary's all about.
+
+### 0<sub>2</sub>
+
+| 16 | 8 | 4 | 2 | 1 |
+| - | - | - | - | - |
+|  |  |  |  | 0 * 2<sup>0</sup>  |
+|  |  |  |  | 0 |
+
+Surprise! `0` is `0` no matter what numeral system you're working in (probably?).
+
+__Decimal: 0__
+
+__Binary: 0__
+
+### 1<sub>2</sub>
+
+| 16 | 8 | 4 | 2 | 1 |
+| - | - | - | - | - |
+|  |  |  |  | 1 * 2<sup>0</sup>  |
+|  |  |  |  | 1 |
+
+Also probably not much of a surprise!
+
+__Decimal: 1__
+
+__Binary: 1__
+
+### 2<sub>2</sub>
+
+| 16 | 8 | 4 | 2 | 1 |
+| - | - | - | - | - |
+|  |  |  | 1 * 2<sup>1</sup>| 0 * 2<sup>0</sup>|
+|  |  |  | 1 | 0 |
+
+Okay, now we start seeing how this really works. The decimal number `2` means there's one number present in the second slot, and zero numbers present in the first slot.
+
+__Decimal: 2__
+
+__Binary: 10__
+
+### 3<sub>2</sub>
+| 16 | 8 | 4 | 2 | 1 |
+| - | - | - | - | - |
+|  |  |  | 1 * 2<sup>1</sup>| 1 * 2<sup>0</sup>|
+|  |  |  | 1 | 1 |
+
+Three is `2 + 1`, so there's one number present in the first slot and one number present in the second slot.
+
+__Decimal: 3__
+
+__Binary: 11__
+
+### 4<sub>2</sub>
+| 16 | 8 | 4 | 2 | 1 |
+| - | - | - | - | - |
+|   |   | 1 * 2<sup>2</sup> | 0 * 2<sup>1</sup> | 0 * 2<sup>0</sup> |
+|   |   | 1 | 0 | 0 |
+
+__Decimal: 4__
+
+__Binary: 100__
+
+### 5<sub>2</sub>
+
+| 16 | 8 | 4 | 2 | 1 |
+| - | - | - | - | - |
+|   |   | 1 * 2<sup>2</sup> | 0 * 2<sup>1</sup> | 1 * 2<sup>0</sup> |
+|   |   | 1 | 0 | 1 |
+
+__Decimal: 5__
+
+__Binary: 101__
+
+### 8<sub>2</sub>
+
+| 16 | 8 | 4 | 2 | 1 |
+| - | - | - | - | - |
+|   | 1 * 2<sup>3</sup> | 0 * 2<sup>2</sup> | 0 * 2<sup>1</sup> | 0 * 2<sup>0</sup> |
+|   | 1 | 0 | 0 | 0 |
+
+__Decimal: 8__
+
+__Binary: 1000__
+
+Hopefully you see how this is progressing. If not, go back to where I mentioned subtracting the largest power multiple you can from your base 10 number and then moving downward from there. Let's try a slightly larger number and work through it so it's plain to see how it works.
+
+### 100<sub>2</sub>
+
+The largest number that's a power of 2 that can be subtracted from `100` is `64`, so we start there.
+
+`100 - 64 = 36`
+
+Now we move to `36`. The largest number that's a square of 2 that can be subtracted from `36` is `32`
+
+`36 - 32 = 4`
+
+And that lands us in a good spot because `4` is 2<sup>2</sup>.
+
+| 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+| - | - | - | - | - | - | - |
+| 1 * 2<sup>6</sup> | 1 * 2<sup>5</sup> | 0 * 2<sup>4</sup> | 0 * 2<sup>3</sup> | 1 * 2<sup>2</sup> | 0 * 2<sup>1</sup> | 0 * 2<sup>0</sup> |
+| 1 | 1 | 0 | 0 | 1 | 0 | 0 |
+
+__Decimal: 100__
+
+__Binary: 1100100__
+
+Pretty simple, right? Now let's move on to some other numeral systems and apply what we know. (I'm just going to use tables for these to keep it simple).
+
+## Quaternary (Base 4)
+
+Now we have 4 values in each slot (0 - 3).
+
+|  | 256 | 64 | 16 | 4 | 1 |
+| - | - | - | - | - | - |
+| 0 |  |  |  |  | 0 |
+| 1 |  |  |  |  | 1 |
+| 2 |  |  |  |  | 2 |
+| 3 |  |  |  |  | 3 |
+| 4 |  |  |  | 1 | 0 |
+| 8 |  |  |  | 2 | 0 |
+| 12 |  |  |  | 3 | 0 |
+| 16 |  |  | 1 | 0 | 0 |
+| 32 |  |  | 2 | 0 | 0 |
+| 48 |  |  | 3 | 0 | 0 |
+| 64 |  | 1 | 0 | 0 | 0 |
+| 128 |  | 2 | 0 | 0 | 0 |
+| 192 |  | 3 | 0 | 0 | 0 |
+| 256 | 1 | 0 | 0 | 0 | 0 |
+| 512 | 2 | 0 | 0 | 0 | 0 |
+| 768 | 3 | 0 | 0 | 0 | 0 |
+
+### Octal(Base 8)
+
+|  | 4096 | 512 | 64 | 8 | 1 |
+| - | - | - | - | - | - |
+| 0 |   |   |   |   | 0 |
+| 1 |   |   |   |   | 1 |
+| 8 |   |   |   | 1 | 0 |
+| 16 |   |   |   | 2 | 0 |
+| 24 |   |   |   | 3 | 0 |
+| 32 |   |   |   | 4 | 0 |
+| 40 |   |   |   | 5 | 0 |
+| 48 |   |   |   | 6 | 0 |
+| 56 |   |   |   | 7 | 0 |
+| 64 |   |   |  1 | 0 | 0 |
+| 512 |   | 1  |  0 | 0 | 0 |
+| 4096 | 1  | 0  |  0 | 0 | 0 |
