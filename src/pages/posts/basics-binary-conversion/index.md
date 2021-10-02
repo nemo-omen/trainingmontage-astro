@@ -29,29 +29,30 @@ Take the number `555` as an example. We think of that as a three-digit number, e
 
 Remember grade school? Remember how our teachers walked us through those digit places back in the day? Ones, Tens, Hundreds, etc? Turns out that's all pretty important when you try to understand number systems.
 
-What you have with the number 555 is actually `500 + 50 + 5` — actually, that's not true either, but I want to start by breaking the numbers we take for granted into their smaller components, so just stick with me for a second.
+What you have with the number 555 is `500 + 50 + 5` — actually, that's not true either, but I want to start by breaking the numbers we take for granted into their smaller components, so just stick with me for a second.
 
 We're used to [Base 10]() numbers. That means each digit in `555` represents an exponent of `10`. We're used to not even thinking about this but each digit in our number system represents a slot that's multiplied by an exponent of 10.
 
 Here, have a table:
 
-| 500 | 5 | 5 | 5 |
-| ---- | ---- | ---- | ---- |
-| or | 500 | 50 | 5 |
-| or | 5 * 100 | 5 * 10 | 5 * 1 |
-| or | 5 * 10<sup>2</sup> | 5 * 10<sup>1</sup> | 5 * 10<sup>0</sup> |
+### 555
 
-Let's try `679`:
+| 500 | 50 | 5 |
+| ---- | ---- | ---- |
+| 5 * 100 | 5 * 10 | 5 * 1 |
+| 5 * 10<sup>2</sup> | 5 * 10<sup>1</sup> | 5 * 10<sup>0</sup> |
 
-| 679 | 6 | 7 | 9 |
-| --- | --- | --- | --- |
-| or | 600 | 70 | 9 |
-| or | 6 * 100 | 7 * 10 | 9 * 1 |
-| or | 6 * 10<sup>2</sup> | 7 * 10<sup>1</sup> | 9 * 10<sup>0</sup> |
+Let's try another.
+
+### 679
+| 600 | 70 | 9 |
+| --- | --- | --- |
+| 6 * 100 | 7 * 10 | 9 * 1 |
+| 6 * 10<sup>2</sup> | 7 * 10<sup>1</sup> | 9 * 10<sup>0</sup> |
 
 Do you see what's happening here? Each of the slots (digits) in our number systems is a power of 10, with the lowest power all the way to the right. The power of 10 we multiply by increases by one with each slot we move to from there.
 
-Another way to think about breaking down these numbers into their constituent parts is by subtracting the number that fits into the largest slot, then moving on to the next largest, and so on, until you're at 10<sub>0</sub>.
+Another way to think about breaking down these numbers into their constituent parts is by subtracting the number that fits into the largest slot, then moving on to the next largest, and so on, until you're at a 10<sup>0</sup> number.
 
 So.
 
@@ -77,10 +78,9 @@ Okay, now let's break down a couple of simple numbers inside this table to see w
 
 | 16 | 8 | 4 | 2 | 1 |
 | - | - | - | - | - |
-|  |  |  |  | 0 * 2<sup>0</sup>  |
 |  |  |  |  | 0 |
 
-Surprise! `0` is `0` no matter what numeral system you're working in (probably?).
+Surprise! `0` is `0`.
 
 __Decimal: 0__
 
@@ -90,7 +90,6 @@ __Binary: 0__
 
 | 16 | 8 | 4 | 2 | 1 |
 | - | - | - | - | - |
-|  |  |  |  | 1 * 2<sup>0</sup>  |
 |  |  |  |  | 1 |
 
 Also probably not much of a surprise!
@@ -103,7 +102,6 @@ __Binary: 1__
 
 | 16 | 8 | 4 | 2 | 1 |
 | - | - | - | - | - |
-|  |  |  | 1 * 2<sup>1</sup>| 0 * 2<sup>0</sup>|
 |  |  |  | 1 | 0 |
 
 Okay, now we start seeing how this really works. The decimal number `2` means there's one number present in the second slot, and zero numbers present in the first slot.
@@ -115,7 +113,6 @@ __Binary: 10__
 ### 3<sub>2</sub>
 | 16 | 8 | 4 | 2 | 1 |
 | - | - | - | - | - |
-|  |  |  | 1 * 2<sup>1</sup>| 1 * 2<sup>0</sup>|
 |  |  |  | 1 | 1 |
 
 Three is `2 + 1`, so there's one number present in the first slot and one number present in the second slot.
@@ -127,7 +124,6 @@ __Binary: 11__
 ### 4<sub>2</sub>
 | 16 | 8 | 4 | 2 | 1 |
 | - | - | - | - | - |
-|   |   | 1 * 2<sup>2</sup> | 0 * 2<sup>1</sup> | 0 * 2<sup>0</sup> |
 |   |   | 1 | 0 | 0 |
 
 __Decimal: 4__
@@ -138,7 +134,6 @@ __Binary: 100__
 
 | 16 | 8 | 4 | 2 | 1 |
 | - | - | - | - | - |
-|   |   | 1 * 2<sup>2</sup> | 0 * 2<sup>1</sup> | 1 * 2<sup>0</sup> |
 |   |   | 1 | 0 | 1 |
 
 __Decimal: 5__
@@ -149,7 +144,6 @@ __Binary: 101__
 
 | 16 | 8 | 4 | 2 | 1 |
 | - | - | - | - | - |
-|   | 1 * 2<sup>3</sup> | 0 * 2<sup>2</sup> | 0 * 2<sup>1</sup> | 0 * 2<sup>0</sup> |
 |   | 1 | 0 | 0 | 0 |
 
 __Decimal: 8__
@@ -172,14 +166,28 @@ And that lands us in a good spot because `4` is 2<sup>2</sup>.
 
 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
 | - | - | - | - | - | - | - |
-| 1 * 2<sup>6</sup> | 1 * 2<sup>5</sup> | 0 * 2<sup>4</sup> | 0 * 2<sup>3</sup> | 1 * 2<sup>2</sup> | 0 * 2<sup>1</sup> | 0 * 2<sup>0</sup> |
 | 1 | 1 | 0 | 0 | 1 | 0 | 0 |
 
 __Decimal: 100__
 
 __Binary: 1100100__
 
-Pretty simple, right? Now let's move on to some other numeral systems and apply what we know. (I'm just going to use tables for these to keep it simple).
+Pretty simple, right? Here's a basic binary multiplication table (yes, I skip a lot of in-between values, but this should be enough to help you understand what's happening). 
+
+After that, we'll move on to some other numeral systems and apply what we know. (I'm just going to use tables for these to keep it simple).
+
+|  | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+| - | - | - | - | - | - | - | - |
+| 0 |   |   |   |   |   |   | 0 |
+| 1 |   |   |   |   |   |   | 1 |
+| 2 |   |   |   |   |   | 1 | 0 |
+| 3 |   |   |   |   |   | 1 | 1 |
+| 4 |   |   |   |   | 1 | 0 | 0 |
+| 8 |   |   |   | 1 | 0 | 0 | 0 |
+| 16 |  |   | 1 | 0 | 0 | 0 | 0 |
+| 32 |  | 1 | 0 | 0 | 0 | 0 | 0 |
+| 64 | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
+
 
 ## Quaternary (Base 4)
 
@@ -205,18 +213,15 @@ Now we have 4 values in each slot (0 - 3).
 | 768 | 3 | 0 | 0 | 0 | 0 |
 
 ### Octal(Base 8)
+Now each slot can have 8 values (0 - 7)
 
 |  | 4096 | 512 | 64 | 8 | 1 |
 | - | - | - | - | - | - |
 | 0 |   |   |   |   | 0 |
 | 1 |   |   |   |   | 1 |
 | 8 |   |   |   | 1 | 0 |
-| 16 |   |   |   | 2 | 0 |
-| 24 |   |   |   | 3 | 0 |
-| 32 |   |   |   | 4 | 0 |
-| 40 |   |   |   | 5 | 0 |
-| 48 |   |   |   | 6 | 0 |
-| 56 |   |   |   | 7 | 0 |
 | 64 |   |   |  1 | 0 | 0 |
 | 512 |   | 1  |  0 | 0 | 0 |
 | 4096 | 1  | 0  |  0 | 0 | 0 |
+
+Okay, that's it for the basic number conversions. Next time we'll cover hexadecimal and 32 bit conversions.
