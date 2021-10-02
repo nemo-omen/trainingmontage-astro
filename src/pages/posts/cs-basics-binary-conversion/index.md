@@ -1,5 +1,5 @@
 ---
-title: 'Basics: Binary Conversion'
+title: 'CS Basics: Binary Conversion'
 date: 2021-10-02 11:25:05
 tags: ["CS Basics", "Binary", "Number Base Conversion"]
 description: Understanding how to convert numbers to and from binary, or any numeric base, is a fundamental concept in programming and computer science. Let's get an understanding of those fundamentals!
