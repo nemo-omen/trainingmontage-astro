@@ -29,9 +29,9 @@ Take the number `555` as an example. We think of that as a three-digit number, e
 
 Remember grade school? Remember how our teachers walked us through those digit places back in the day? Ones, Tens, Hundreds, etc? Turns out that's all pretty important when you try to understand number systems.
 
-What you have with the number 555 is `500 + 50 + 5` — actually, that's not true either, but I want to start by breaking the numbers we take for granted into their smaller components, so just stick with me for a second.
+What you have with the number 555 is `500 + 50 + 5` — okay, that's not true either, but I want to start by breaking the numbers we take for granted into their smaller components, so just stick with me for a second.
 
-We're used to [Base 10]() numbers. That means each digit in `555` represents an exponent of `10`. We're used to not even thinking about this but each digit in our number system represents a slot that's multiplied by an exponent of 10.
+We're used to [Base 10]() numbers. That means each digit in `555` represents an exponent of `10`. We're used to not even thinking about this, but each digit in our number system represents a slot that's multiplied by an exponent of 10.
 
 Here, have a table:
 
@@ -150,7 +150,7 @@ __Decimal: 8__
 
 __Binary: 1000__
 
-Hopefully you see how this is progressing. If not, go back to where I mentioned subtracting the largest power multiple you can from your base 10 number and then moving downward from there. Let's try a slightly larger number and work through it so it's plain to see how it works.
+Hopefully, you see how this is progressing. If not, go back to where I mentioned subtracting the largest power multiple you can from your base 10 number and then moving downward from there. Let's try a slightly larger number and work through it so it's plain to see how it works.
 
 ### 100<sub>2</sub>
 
