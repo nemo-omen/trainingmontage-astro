@@ -1,0 +1,15 @@
+#content {
+  margin-top: 4rem;
+  grid-gap: 4rem;
+}
+
+main {
+  order: 2;
+}
+
+@media (max-width: 768px) {
+  #content {
+    display: flex;
+    flex-direction: column;
+  }
+}
