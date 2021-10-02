@@ -39,3 +39,22 @@
   justify-content: space-between;
   align-items: center;
 }
+
+table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+table, th, tr, td {
+  text-align: center;
+  border: 1px solid var(--color-hover);
+}
+
+td, th {
+  padding: 0.5rem;
+}
+
+th {
+  font-size: var(--size-500);
+}
