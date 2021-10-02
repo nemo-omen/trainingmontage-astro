@@ -29,11 +29,15 @@ Take the number `555` as an example. We think of that as a three-digit number, e
 
 Remember grade school? Remember how our teachers walked us through those digit places back in the day? Ones, Tens, Hundreds, etc? Turns out that's all pretty important when you try to understand number systems.
 
-What you have with the number 555 is `500 + 50 + 5` — okay, that's not true either, but I want to start by breaking the numbers we take for granted into their smaller components, so just stick with me for a second.
+What you have with the number <span class="highlight">555 = 500 + 50 + 5</span>.
 
-We're used to [Base 10]() numbers. That means each digit in `555` represents an exponent of `10`. We're used to not even thinking about this, but each digit in our number system represents a slot that's multiplied by an exponent of 10.
+We could also say <span class="highlight">555 = (5 * 100) + (5 * 10) + (5 * 1)</span>.
 
-Here, have a table:
+Or, if we want to get really explicit, we could say <span class="highlight">555 = (5 * 10<sup>2</sup>) + (5 * 10<sup>1</sup>) + (5 * 10<sup>0</sup>)</span>.
+
+We're used to not even thinking about this, but each digit in our number system represents a slot that's multiplied by an exponent of 10.
+
+Here, have a table that illustrates the point:
 
 ### 555
 
@@ -52,11 +56,13 @@ Let's try another.
 
 Do you see what's happening here? Each of the slots (digits) in our number systems is a power of 10, with the lowest power all the way to the right. The power of 10 we multiply by increases by one with each slot we move to from there.
 
-Another way to think about breaking down these numbers into their constituent parts is by subtracting the number that fits into the largest slot, then moving on to the next largest, and so on, until you're at a 10<sup>0</sup> number.
+Another way to think about breaking down these numbers into their constituent parts is by subtracting the largest number that fits into the largest slot, then moving on to the next largest, and so on, until you're at a <span class="highlight">10<sup>0</sup></span> number.
 
-So.
+<span class="highlight">679 - 600 = 79</span>
 
-`679 - 600 = 79 - 70 = 9`
+<span class="highlight">79 - 70 = 9</span>
+
+<span class="highlight">9</span>
 
 That's essentially the logic every other numeral system we'll be covering works. With binary, each slot is a power of 2. Quaternary? That's a power of 4.
 

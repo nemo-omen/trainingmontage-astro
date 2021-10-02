@@ -101,13 +101,13 @@ hr {
     /* --color-bg: var(--primary-light);
     --color-fg: var(--primary-dark); */
   }
-  pre {
+  pre, .highlight {
     background-color: rgb(var(--rgb-whitish), 0.04) !important;
   }
 
 }
 @media (prefers-color-scheme: light) {
-  pre {
+  pre, .highlight {
     background-color: rgb(var(--rgb-rich-black-fogra-29), 0.9) !important;
   }
 }
