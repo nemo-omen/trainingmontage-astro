@@ -86,6 +86,8 @@ JavaScript provides some nice convenience methods for converting a binary number
 
 So, that leaves 32-bit conversions. Those behave exactly the same as hexadecimal conversions, but since we're dealing with numbers larger than 15, we need to include additional substitution characters.
 
+Two 32-bit digits can account for 1,024 decimal numbers.
+
 Here's a 32-bit table (hopefully the table works for smaller screens, because it's going to be pretty big).
 
 <table id="table-thirtytwo">
