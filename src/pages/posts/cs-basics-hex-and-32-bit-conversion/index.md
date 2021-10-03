@@ -47,6 +47,14 @@ Two digits can represent 256 unique numbers.
 
 Honestly, this table could go on forever, so I'm going to whip up a hex multiplication table with client-side JavaScript and you can use that for reference if you need to.
 
+<table id="hex-table">
+
+</table>
+
 <script>
-  console.log('hello, hex');
+  const table = document.getElementById('hex-table');
+  let head = table.createTHead();
+  for(let i = 0; i < 16; i++) {
+
+  }
 </script>
