@@ -3,6 +3,7 @@ title: 'CS Basics: Converting Between Binary and Hexadecimal'
 date: 2021-10-04 17:58:14
 tags: ["CS Basics", "Binary", "Hexadecimal", "Nibbles"]
 description: Now that we've covered the basic numeral systems, it's time to learn how to convert from one to the other.
+permalink: https://trainingmontage.dev/posts/cs-basics-converting-between-binary-and-hexadecimal/
 layout: ../../../layouts/BlogLayout.astro
 id: d41f2b79-3cbe-41a0-9fed-1b8dc6e78c3f
 ---
