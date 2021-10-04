@@ -7,6 +7,28 @@ layout: ../../../layouts/BlogLayout.astro
 id: 96bd0a47-d6b1-4311-b8c0-c51706489ed7
 ---
 
+<div class="toc">
+  <div class="flow">
+    <p>
+      This post is the 2nd in a series about basic concepts in programming and Computer Science. You can find all the posts in the series below.
+    </p>
+    <ol>
+      <li>
+        <a href="/posts/cs-basics-binary-conversion">CS Basics: Binary Conversion</a>
+      </li>
+      <li>
+        <a href="/posts/cs-basics-hex-and-32-bit-conversion">CS Basics: Hex and 32 Bit Conversion</a>
+      </li>
+      <li>
+        <a href="/posts/cs-basics-detour--nibbles-msb-and-lsb">CS Basics: Detour - Nibbles, MSB, and LSB</a>
+      </li>
+      <li>
+        <a href="/posts/cs-basics-converting-between-binary-and-hexadecimal">CS Basics: Converting Between Binary and Hexadecimal</a>
+      </li>
+    </ol>
+  </div>
+</div>
+
 In the [last post](/posts/cs-basics-binary-conversion) in this series, we covered converting binary, quaternary, and octal numbers. Now we'll go through hexadecimal and 32 bit numbers. If you haven't read the first post, go ahead and read it now then come back.
 
 Converting hex and 32 bit numbers is pretty close to the same as converting smaller bases, but there's one important difference — we have to be able to account for numbers larger than 9.

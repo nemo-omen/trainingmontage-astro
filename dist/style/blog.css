@@ -65,3 +65,7 @@ th, .table-head-cell {
   background-color: var(--color-hover);
   border: 1px solid var(--color-bg);
 }
+
+.table-highlight {
+  background: rgb(var(--rgb-color-hover), 0.3);
+}

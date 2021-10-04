@@ -7,6 +7,28 @@ layout: ../../../layouts/BlogLayout.astro
 id: 78be3d29-6a46-400c-a6be-972a99e4083a
 ---
 
+<div class="toc">
+  <div class="flow">
+    <p>
+      This post is the 3rd in a series about basic concepts in programming and Computer Science. You can find all the posts in the series below.
+    </p>
+    <ol>
+      <li>
+        <a href="/posts/cs-basics-binary-conversion">CS Basics: Binary Conversion</a>
+      </li>
+      <li>
+        <a href="/posts/cs-basics-hex-and-32-bit-conversion">CS Basics: Hex and 32 Bit Conversion</a>
+      </li>
+      <li>
+        <a href="/posts/cs-basics-detour--nibbles-msb-and-lsb">CS Basics: Detour - Nibbles, MSB, and LSB</a>
+      </li>
+      <li>
+        <a href="/posts/cs-basics-converting-between-binary-and-hexadecimal">CS Basics: Converting Between Binary and Hexadecimal</a>
+      </li>
+    </ol>
+  </div>
+</div>
+
 Up until now, I've been representing binary, quaternary, octal, and hexadecimal numbers a little incorrectly. I did this so we wouldn't be dealing with too many concepts at once. So, let's take a detour and look at the way binary numbers are traditionally represented.
 
 Binary numbers are, at least in computer science, represented in groups of what's called a __nibble__. A nibble is half of a __byte__. Because a byte is 8 __bits__, a nibble is 4 bits.

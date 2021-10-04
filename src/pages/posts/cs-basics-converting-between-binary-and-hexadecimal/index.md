@@ -1,13 +1,35 @@
 ---
 title: 'CS Basics: Converting Between Binary and Hexadecimal'
-date: 2021-10-03 17:58:14
+date: 2021-10-04 17:58:14
 tags: ["CS Basics", "Binary", "Hexadecimal", "Nibbles"]
 description: Now that we've covered the basic numeral systems, it's time to learn how to convert from one to the other.
 layout: ../../../layouts/BlogLayout.astro
 id: d41f2b79-3cbe-41a0-9fed-1b8dc6e78c3f
 ---
 
-The previous three posts in this series covered the basic numeral systems you'll come across as a programmer. Two of the most common systems are binary and hexadecimal, so it's a good idea to be able to convert between the two.
+<div class="toc">
+  <div class="flow">
+    <p>
+      This post is the 4th in a series about basic concepts in programming and Computer Science. You can find all the posts in the series below.
+    </p>
+    <ol>
+      <li>
+        <a href="/posts/cs-basics-binary-conversion">CS Basics: Binary Conversion</a>
+      </li>
+      <li>
+        <a href="/posts/cs-basics-hex-and-32-bit-conversion">CS Basics: Hex and 32 Bit Conversion</a>
+      </li>
+      <li>
+        <a href="/posts/cs-basics-detour--nibbles-msb-and-lsb">CS Basics: Detour - Nibbles, MSB, and LSB</a>
+      </li>
+      <li>
+        <a href="/posts/cs-basics-converting-between-binary-and-hexadecimal">CS Basics: Converting Between Binary and Hexadecimal</a>
+      </li>
+    </ol>
+  </div>
+</div>
+
+The previous three posts in this series covered the basic numeral systems you'll come across as a programmer. Two of the most common are binary and hexadecimal, so it's a good idea to be able to convert between the two.
 
 We'll start by converting from binary to hex, then do it the other way around, and then we'll take a minute to talk about converting from some of the other systems we went over in earlier posts.
 

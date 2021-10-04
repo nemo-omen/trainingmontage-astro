@@ -51,6 +51,7 @@
     --color-muted-highlight: var(--primary-dark-02);
     --color-link: var(--bittersweet);
     --color-hover: var(--pacific-blue);
+    --rgb-color-hover: var(--rgb-pacific-blue);
 }
 
 body {
@@ -96,6 +97,7 @@ hr {
     --color-link: var(--pacific-blue);
     --rgb-color-fg: var(--rgb-primary-light);
     --rgb-color-bg: var(--rgb-primary-dark);
+    --rgb-color-hover: var(--rgb-bittersweet);
     /* --color-link: var(--pacific-blue);
     --color-hover: var(--dogwood-rose); */
     /* --color-bg: var(--primary-light);

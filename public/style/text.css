@@ -140,7 +140,7 @@ h3 {
   --flow-space: var(--size-800);
 }
 
-.note, .warn {
+.note, .warn, .toc {
   display: flex;
   align-items: center;
   background-color: var(--color-muted-highlight);
@@ -148,7 +148,7 @@ h3 {
   gap: 1rem;
 }
 
-.note {
+.note, .toc {
   color: var(--pacific-blue);
 }
 

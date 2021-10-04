@@ -8,6 +8,28 @@ layout: ../../../layouts/BlogLayout.astro
 id: 1f133fcc-5a34-4cef-bd05-736a7bf34295
 ---
 
+<div class="toc">
+  <div class="flow">
+    <p>
+      This post is the 1st in a series about basic concepts in programming and Computer Science. You can find all the posts in the series below.
+    </p>
+    <ol>
+      <li>
+        <a href="/posts/cs-basics-binary-conversion">CS Basics: Binary Conversion</a>
+      </li>
+      <li>
+        <a href="/posts/cs-basics-hex-and-32-bit-conversion">CS Basics: Hex and 32 Bit Conversion</a>
+      </li>
+      <li>
+        <a href="/posts/cs-basics-detour--nibbles-msb-and-lsb">CS Basics: Detour - Nibbles, MSB, and LSB</a>
+      </li>
+      <li>
+        <a href="/posts/cs-basics-converting-between-binary-and-hexadecimal">CS Basics: Converting Between Binary and Hexadecimal</a>
+      </li>
+    </ol>
+  </div>
+</div>
+
 Binary conversion was one of those things I glossed over when I first started learning to program.
 
 Actually, that's not true, it's something I glossed over until it got me into trouble. I know I shouldn't have but the subject, like a lot of math-based subjects, just made my eyes glaze over as soon as someone started talking about it or teaching it. I just figured I would learn it properly when I really needed to. 
