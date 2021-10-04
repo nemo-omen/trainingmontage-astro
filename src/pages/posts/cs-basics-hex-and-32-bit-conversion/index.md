@@ -1,6 +1,6 @@
 ---
 title: 'CS Basics: Hex and 32 bit Conversion'
-date: 2021-10-03 10:54:19
+date: 2021-10-04 15:06:01
 tags: ["CS Basics", "Hexadecimal", "32 Bit Numbers", "Number Base Conversion"]
 description: Once you have a handle on basic numeral systems like binary, it's time to move on to more complicated systems. We'll cover hexadecimal and 32 bit numbers in the second CS Basics post.
 permalink: https://trainingmontage.dev/posts/cs-basics-hex-and-32-bit-conversion/
@@ -19,12 +19,6 @@ id: 96bd0a47-d6b1-4311-b8c0-c51706489ed7
       </li>
       <li>
         <a href="/posts/cs-basics-hex-and-32-bit-conversion">CS Basics: Hex and 32 Bit Conversion</a>
-      </li>
-      <li>
-        <a href="/posts/cs-basics-detour--nibbles-msb-and-lsb">CS Basics: Detour - Nibbles, MSB, and LSB</a>
-      </li>
-      <li>
-        <a href="/posts/cs-basics-converting-between-binary-and-hexadecimal">CS Basics: Converting Between Binary and Hexadecimal</a>
       </li>
     </ol>
   </div>
