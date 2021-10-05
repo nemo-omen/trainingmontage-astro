@@ -178,7 +178,7 @@ The integers in the table above are, of course, only showing 4 bit numbers. The 
 | -------------- | --- | - | - | - | - | - | - | --- |
 |       150      |  1  | 0 | 0 | 1 | 0 | 1 | 1 |  0  |
 
-Usually the LSB is shown at the first position, in our case that's all the way to the right. The MSB is shown in the last position, or all the way on the left. There are some differences in the way some processors have handled this but wwe don't need to get into that for this post.
+Usually the LSB is shown at the first position, in our case that's all the way to the right. The MSB is shown in the last position, or all the way on the left. There are some differences in the way some processors have handled this but we don't need to get into that for this post.
 
 That's it for nibbles, LSB, and MSB! We can get into converting between different bases on the next post. 
 
