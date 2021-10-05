@@ -1,0 +1,36 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="trainingmontage — writing and web dev">
+<div class="fourohfour flow">
+  <h2 class="ohno">
+    404<br>
+    <span class="ohno-message">Looks like that page doesn't exist!</span>
+  </h2>
+  <a href="/" class="fourohfour-link">Go home!</a>
+</div>
+</MainLayout>
+
+<style>
+  .fourohfour {
+    margin: var(--size-900) auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    --flow-space: var(--size-900);
+  }
+  .ohno {
+    font-size: calc(var(--size-900) * 2);
+    color: var(--color-hover);
+    line-height: 1;
+  }
+  .ohno-message {
+    font-size: var(--size-700);
+  }
+  .fourohfour-link {
+    font-size: var(--size-600);
+  }
+</style>
