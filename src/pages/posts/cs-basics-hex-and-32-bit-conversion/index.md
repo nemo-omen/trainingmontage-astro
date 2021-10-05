@@ -20,6 +20,9 @@ id: 96bd0a47-d6b1-4311-b8c0-c51706489ed7
       <li>
         <a href="/posts/cs-basics-hex-and-32-bit-conversion">CS Basics: Hex and 32 Bit Conversion</a>
       </li>
+      <li>
+        <a href="/posts/cs-basics-detour--nibbles-msb-and-lsb">CS Basics: Detour - Nibbles, MSB, and LSB</a>
+      </li>
     </ol>
   </div>
 </div>

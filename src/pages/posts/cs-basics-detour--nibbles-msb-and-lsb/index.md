@@ -1,6 +1,6 @@
 ---
 title: 'CS Basics: Detour - Nibbles, MSB, and LSB'
-date: 2021-10-03 12:21:27
+date: 2021-10-05 05:09:49
 tags: ["CS Basics", "Binary", "Hexadecimal", "MSB", "LSB", "Nibbles"]
 description: We're taking a quick detour to talk about an important concept when dealing with binary numbers — the Most Significant Bit, and the Least Significant Bit.
 permalink: https://trainingmontage.dev/posts/cs-basics--nibbles-msb-and-lsb/
@@ -23,9 +23,9 @@ id: 78be3d29-6a46-400c-a6be-972a99e4083a
       <li>
         <a href="/posts/cs-basics-detour--nibbles-msb-and-lsb">CS Basics: Detour - Nibbles, MSB, and LSB</a>
       </li>
-      <li>
+      <!-- <li>
         <a href="/posts/cs-basics-converting-between-binary-and-hexadecimal">CS Basics: Converting Between Binary and Hexadecimal</a>
-      </li>
+      </li> -->
     </ol>
   </div>
 </div>
