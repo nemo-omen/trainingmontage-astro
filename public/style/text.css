@@ -180,6 +180,7 @@ h3 {
 .tags-list {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
   padding: 0;
