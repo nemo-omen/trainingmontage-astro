@@ -13,5 +13,9 @@ export default /** @type {import('astro').AstroUserConfig} */ (
     renderers: [
       '@astrojs/renderer-svelte'
     ],
+    buildOptios: {
+      site: "https://trainingmontage.dev/",
+      sitemap: true,
+    },
   }
 );

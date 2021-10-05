@@ -6,11 +6,12 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
+    "reload": "astro --reload",
     "min": "imagemin public/assets/images/* --out-dir=dist/assets/images",
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^0.20.7",
+    "astro": "^0.20.9",
     "imagemin": "^8.0.1",
     "imagemin-cli": "^7.0.0"
   },
