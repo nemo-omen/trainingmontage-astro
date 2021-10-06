@@ -43,117 +43,117 @@ Since each bit can hold a maxinum of two values, a nibble can represent a range 
 <table>
   <thead>
     <tr>
-      <th colspan="1"></th>
-      <th colspan="4">N<sub>2</sub> Nibble</th>
+      <td style="border-color: transparent"></td>
+      <th colspan="4" scope="col">N<sub>2</sub> Nibble</th>
     </tr>
   </thead>
   <tr>
-    <td class="table-head-cell">0</td>
+    <th scope="row">0</th>
     <td>0</td>
     <td>0</td>
     <td>0</td>
     <td>0</td>
   </tr>
   <tr>
-    <td class="table-head-cell">1</td>
+    <th scope="row">1</th>
     <td>0</td>
     <td>0</td>
     <td>0</td>
     <td>1</td>
   </tr>
   <tr>
-    <td class="table-head-cell">2</td>
+    <th scope="row">2</th>
     <td>0</td>
     <td>0</td>
     <td>1</td>
     <td>0</td>
   </tr>
   <tr>
-    <td class="table-head-cell">3</td>
+    <th scope="row">3</th>
     <td>0</td>
     <td>0</td>
     <td>1</td>
     <td>1</td>
   </tr>
   <tr>
-    <td class="table-head-cell">4</td>
+    <th scope="row">4</th>
     <td>0</td>
     <td>1</td>
     <td>0</td>
     <td>0</td>
   </tr>
   <tr>
-    <td class="table-head-cell">5</td>
+    <th scope="row">5</th>
     <td>0</td>
     <td>1</td>
     <td>0</td>
     <td>1</td>
   </tr>
   <tr>
-    <td class="table-head-cell">6</td>
+    <th scope="row">6</th>
     <td>0</td>
     <td>1</td>
     <td>1</td>
     <td>0</td>
   </tr>
   <tr>
-    <td class="table-head-cell">7</td>
+    <th scope="row">7</th>
     <td>0</td>
     <td>1</td>
     <td>1</td>
     <td>1</td>
   </tr>
   <tr>
-    <td class="table-head-cell">8</td>
+    <th scope="row">8</th>
     <td>1</td>
     <td>0</td>
     <td>0</td>
     <td>0</td>
   </tr>
   <tr>
-    <td class="table-head-cell">9</td>
+    <th scope="row">9</th>
     <td>1</td>
     <td>0</td>
     <td>0</td>
     <td>1</td>
   </tr>
   <tr>
-    <td class="table-head-cell">10</td>
+    <th scope="row">10</th>
     <td>1</td>
     <td>0</td>
     <td>1</td>
     <td>0</td>
   </tr>
   <tr>
-    <td class="table-head-cell">11</td>
+    <th scope="row">11</th>
     <td>1</td>
     <td>0</td>
     <td>1</td>
     <td>1</td>
   </tr>
   <tr>
-    <td class="table-head-cell">12</td>
+    <th scope="row">12</th>
     <td>1</td>
     <td>1</td>
     <td>0</td>
     <td>0</td>
   </tr>
   <tr>
-    <td class="table-head-cell">13</td>
+    <th scope="row">13</th>
     <td>1</td>
     <td>1</td>
     <td>0</td>
     <td>1</td>
   </tr>
   <tr>
-    <td class="table-head-cell">14</td>
+    <th scope="row">14</th>
     <td>1</td>
     <td>1</td>
     <td>1</td>
     <td>0</td>
   </tr>
   <tr>
-    <td class="table-head-cell">15</td>
+    <th scope="row">15</th>
     <td>1</td>
     <td>1</td>
     <td>1</td>

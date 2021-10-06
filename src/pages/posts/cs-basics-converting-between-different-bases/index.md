@@ -42,7 +42,7 @@ Remember the last post when we talked about nibbles? Those come in really handy 
 <table>
 <thead>
   <tr>
-    <th colspan="5">
+    <th colspan="5" scope="col">
       15<sub>10</sub>
     </th>
   </tr>
@@ -76,7 +76,7 @@ Let's do a larger one.
   </colgroup>
   <thead>
     <tr>
-      <th colspan="9">30<sub>10</sub></th>
+      <th colspan="9" scope="col">30<sub>10</sub></th>
     </tr>
   </thead>
   <tr>
