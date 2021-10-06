@@ -238,3 +238,12 @@ h3 {
     max-width: 40ch;
   }
 }
+
+@media (max-width: 650px) {
+  h2.post-title {
+    font-size: var(--size-600);
+  }
+  .tags-list {
+    gap: var(--size-500);
+  }
+}
