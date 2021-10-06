@@ -23,9 +23,9 @@ id: 78be3d29-6a46-400c-a6be-972a99e4083a
       <li>
         <a href="/posts/cs-basics-detour--nibbles-msb-and-lsb">CS Basics: Detour - Nibbles, MSB, and LSB</a>
       </li>
-      <!-- <li>
-        <a href="/posts/cs-basics-converting-between-binary-and-hexadecimal">CS Basics: Converting Between Binary and Hexadecimal</a>
-      </li> -->
+      <li>
+        <a href="/posts/cs-basics-converting-between-different-bases">CS Basics: Converting Between Different Bases</a>
+      </li>
     </ol>
   </div>
 </div>

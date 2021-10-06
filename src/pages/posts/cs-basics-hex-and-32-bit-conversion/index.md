@@ -23,6 +23,9 @@ id: 96bd0a47-d6b1-4311-b8c0-c51706489ed7
       <li>
         <a href="/posts/cs-basics-detour--nibbles-msb-and-lsb">CS Basics: Detour - Nibbles, MSB, and LSB</a>
       </li>
+      <li>
+        <a href="/posts/cs-basics-converting-between-different-bases">CS Basics: Converting Between Different Bases</a>
+      </li>
     </ol>
   </div>
 </div>
