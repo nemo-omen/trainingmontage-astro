@@ -181,34 +181,34 @@ __Quaternary____
 
 Group binary into sets of two digits
 
-Bin: `11` `10` `11` `01`
+Bin: `11`, `10`, `11`, `01`
 
-Decimal: `3` `2` `3` `1`
+Decimal: `3`, `2`, `3`, `1`
 
-Quat: `3` `2` `3` `1`
+Quad: `3`, `2`, `3`, `1`
 
 __Octal__
 
-Bin: `011` `101` `101`
+Bin: `011`, `101`, `101`
 
-Decimal: `3` `5` `5`
+Decimal: `3`, `5`, `5`
 
-Octal: `3` `5` `5`
+Octal: `3`, `5`, `5`
 
 __Hexadecimal__
 
-Bin: `1110` `1101`
+Bin: `1110`, `1101`
 
-Decimal: `14` `13`
+Decimal: `14`, `13`
 
-Hex: `E` `D`
+Hex: `E`, `D`
 
 __32-bit__
 
-Bin: `00111` `01101`
+Bin: `00111`, `01101`
 
-Decimal: `7` `13`
+Decimal: `7`, `13`
 
-Hex: `7` `D`
+Hex: `7`, `D`
 
 That's it for binary/hex conversions! Tune in soon for bitwise operators and bit shifting!
