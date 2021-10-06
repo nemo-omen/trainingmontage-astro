@@ -177,7 +177,7 @@ Let's practice with a number.
 
 The number `237` in binary form is `11101101`.
 
-__Quaternary____
+#### Quaternary
 
 Group binary into sets of two digits
 
@@ -187,7 +187,7 @@ Decimal: `3`, `2`, `3`, `1`
 
 Quad: `3`, `2`, `3`, `1`
 
-__Octal__
+#### Octal
 
 Bin: `011`, `101`, `101`
 
@@ -195,7 +195,7 @@ Decimal: `3`, `5`, `5`
 
 Octal: `3`, `5`, `5`
 
-__Hexadecimal__
+#### Hexadecimal
 
 Bin: `1110`, `1101`
 
@@ -203,7 +203,7 @@ Decimal: `14`, `13`
 
 Hex: `E`, `D`
 
-__32-bit__
+#### 32-bit
 
 Bin: `00111`, `01101`
 
