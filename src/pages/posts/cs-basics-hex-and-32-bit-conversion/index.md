@@ -3,6 +3,7 @@ title: 'CS Basics: Hex and 32 bit Conversion'
 date: 2021-10-04 15:06:01
 tags: ["CS Basics", "Hexadecimal", "32 Bit Numbers", "Number Base Conversion"]
 description: Once you have a handle on basic numeral systems like binary, it's time to move on to more complicated systems. We'll cover hexadecimal and 32 bit numbers in the second CS Basics post.
+slug: cs-basics-converting-between-binary-and-hexadecimal
 permalink: https://trainingmontage.dev/posts/cs-basics-hex-and-32-bit-conversion/
 layout: ../../../layouts/BlogLayout.astro
 id: 96bd0a47-d6b1-4311-b8c0-c51706489ed7

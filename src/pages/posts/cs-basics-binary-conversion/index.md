@@ -3,6 +3,7 @@ title: 'CS Basics: Binary Conversion'
 date: 2021-10-02 11:25:05
 tags: ["CS Basics", "Binary", "Number Base Conversion"]
 description: Understanding how to convert numbers to and from binary, or any numeric base, is a fundamental concept in programming and computer science. Let's get a grip on those fundamentals!
+slug: cs-basics-binary-conversion
 permalink: https://trainingmontage.dev/posts/cs-basics-binary-conversion/
 layout: ../../../layouts/BlogLayout.astro
 id: 1f133fcc-5a34-4cef-bd05-736a7bf34295
