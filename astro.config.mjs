@@ -13,7 +13,7 @@ export default /** @type {import('astro').AstroUserConfig} */ (
     renderers: [
       '@astrojs/renderer-svelte'
     ],
-    buildOptios: {
+    buildOptions: {
       site: "https://trainingmontage.dev/",
       sitemap: true,
     },
