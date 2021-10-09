@@ -102,8 +102,17 @@ blockquote {
 }
 
 pre {
-  margin-top: var(--size-700) !important;
+  /* margin-top: var(--size-700) !important; */
   font-size: clamp(1rem, 2vw, 1.3rem);
+  border-radius: 0 !important;
+}
+
+.code-caption {
+  text-align: right;
+  line-height: 1;
+  margin-inline: var(--size-500);
+  font-size: var(--size-500);
+  color: var(--color-hover);
 }
 
 code:not(pre), .highlight {

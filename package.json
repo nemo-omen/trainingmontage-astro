@@ -17,6 +17,9 @@
   },
   "dependencies": {
     "@astrojs/renderer-svelte": "^0.1.2",
-    "motion": "^10.0.1"
+    "hast-util-select": "^5.0.1",
+    "motion": "^10.0.1",
+    "rehype-shiki": "^0.0.9",
+    "rehype-wrap-all": "^1.1.0"
   }
 }
