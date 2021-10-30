@@ -1,7 +1,7 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import BlogPreview from '../components/BlogPreview.astro';
-
+import PageLayout from '../layouts/PageLayout.astro';
     let mdPosts = Astro.fetchContent('./posts/*/*.md');
     let allPosts = [...mdPosts];
     allPosts = allPosts.sort((a,b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
@@ -33,9 +33,11 @@ import BlogPreview from '../components/BlogPreview.astro';
 ---
 
 <MainLayout title="trainingmontage — writing and web dev">
-    <section class="post-list flow">
-        {allPosts.map((post) => <BlogPreview post={post} />)}
-    </section>
+    <PageLayout>
+        <section class="post-list flow">
+            {allPosts.map((post) => <BlogPreview post={post} />)}
+        </section>
+    </PageLayout>
 </MainLayout>
 
 <style>

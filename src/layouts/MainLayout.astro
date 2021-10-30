@@ -2,15 +2,13 @@
 import BaseHeadLayout from '../layouts/BaseHeadLayout.astro';
 import PageLayout from '../layouts/PageLayout.astro';
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
 let { title } = Astro.props;
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
 ---
 <html lang="en">
     <BaseHeadLayout title={title} />
-    <PageLayout>
+    <Header />
         <slot />
-    </PageLayout>
+    <Footer />
 </html>
