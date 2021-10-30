@@ -1,10 +1,11 @@
 {
-  "name": "@example/starter",
+  "name": "trainingmontage.dev",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
+    "check": "astro check",
     "build": "astro build",
     "reload": "astro --reload",
     "min": "imagemin public/assets/images/* --out-dir=dist/assets/images",
