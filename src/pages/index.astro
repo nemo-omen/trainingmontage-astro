@@ -5,31 +5,6 @@ import PageLayout from '../layouts/PageLayout.astro';
     let mdPosts = Astro.fetchContent('./posts/*/*.md');
     let allPosts = [...mdPosts];
     allPosts = allPosts.sort((a,b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
-
-    // export async function getStaticPaths({rss}) {
-    //     const fetchedRssPosts = Astro.fetchContent('./posts/*/*.md');
-    //     const rssPosts = fetchedRssPosts.sort((a,b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
-    //     rss({
-    //         title: 'trainingmontage',
-    //         description: 'Writing & Web Development',
-    //         customData: `<language>en-us</language>`,
-    //         // The list of items for your RSS feed, sorted.
-    //         items: rssPosts.map(item => ({
-    //             title: item.title,
-    //             description: item.description,
-    //             link: item.permalink,
-    //             pubDate: item.date,
-    //         })),
-    //     dest: "/feed.xml",
-    //     });
-    //     return [...rssPosts].map((post) => {
-    //         params: { post.permalink }
-    //         props: {rssPosts}
-    //     });
-    // }
-
-    // const { rssPosts } = Astro.props;
-    // const { params } = Astro.request.params;
 ---
 
 <MainLayout title="trainingmontage — writing and web dev">
