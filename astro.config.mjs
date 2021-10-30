@@ -9,13 +9,12 @@
 export default /** @type {import('astro').AstroUserConfig} */ (
   {
     markdownOptions: {
-      rehypePlugins: [
-        [import('rehype-wrap-all'), {
-          selector: 'pre',
-          wrapper: 'figure.code-figure'
-        }],
-        'rehype-insert-filename',
-        // 'rehype-shiki',
+      remarkPlugins: [
+        // 'remark-prism',
+        // [import('remark-code-figure'), {captionOptions: {position: 'before'}}],
+        // 'remark-footnotes',
+        // '@silvenon/remark-smartypants',
+        // 'remark-gfm'
       ],
     },
     // Set "renderers" to "[]" to disable all default, builtin component support.
