@@ -1,0 +1,23 @@
+---
+const { titles, permalinks, description } = Astro.props;
+
+let listItems = [];
+
+for(let i = 0; i < titles.length; i++) {
+  listItems.push({
+    title: titles[i],
+    permalink: permalinks[i],
+  });
+}
+---
+
+  <div class="toc">
+  <div class="flow">
+    <p>
+      {description}
+    </p>
+    <ol>
+      {listItems.map((item) => `<li><a href="${item.permalink}">${item.title}</a></li>`)}
+    </ol>
+  </div>
+</div>
