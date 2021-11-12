@@ -1,7 +1,8 @@
 ---
   import BaseHeadLayout from '../layouts/BaseHeadLayout.astro';
   import BlogHeadLayout from '../layouts/BlogHeadLayout.astro';
-  import PageLayout from '../layouts/PageLayout.astro';
+  import Header from '../components/Header.astro'
+  import Footer from '../components/Footer.astro'
   import './prism-nord.css';
   
   const { content } = Astro.props;
@@ -22,33 +23,39 @@
   />
 </BaseHeadLayout>
 
-<PageLayout>
-<article class="post flow">
-  <section class="post-header flow">
-      <h2 class="post-title">{content.title}</h2>
-      <time>
-        {
-          new Date(content.date)
-            .toLocaleDateString(
-              "en-US",
-              {
-                weekday: 'long', 
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-                }
-            )
-          }
-      </time>
-      <ul class="tags-list">
-        {content.tags.map(
-          (tag) => <li class="tag-item">
-            <a href={"/tag/" + tag} class="post-tag">{tag}</a>
-          </li>)}
-      </ul>
-  </section>
-  <section class="post-content flow">
-    <slot />
-  </section>
-</article>
-</PageLayout>
+<body>
+    <Header />
+    <div id="content">
+        <main tabindex="-1">
+        <article class="post flow">
+          <section class="post-header flow">
+              <h2 class="post-title">{content.title}</h2>
+              <time>
+                {
+                  new Date(content.date)
+                    .toLocaleDateString(
+                      "en-US",
+                      {
+                        weekday: 'long', 
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                        }
+                    )
+                  }
+              </time>
+              <ul class="tags-list">
+                {content.tags.map(
+                  (tag) => <li class="tag-item">
+                    <a href={"/tag/" + tag} class="post-tag">{tag}</a>
+                  </li>)}
+              </ul>
+          </section>
+          <section class="post-content flow">
+            <slot />
+          </section>
+        </article>
+        </main>
+    </div>
+    <Footer />
+</body>
