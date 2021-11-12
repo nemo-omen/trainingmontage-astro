@@ -4,10 +4,10 @@ import MainLayout from '../layouts/MainLayout.astro';
 
 <MainLayout title="trainingmontage — writing and web dev">
 <div class="fourohfour flow">
-  <h2 class="ohno">
-    404<br>
-    <span class="ohno-message">Looks like that page doesn't exist!</span>
+  <h2 class="error">
+    404
   </h2>
+  <span class="ohno-message">Looks like that page doesn't exist!</span>
   <a href="/" class="fourohfour-link">Go home!</a>
 </div>
 </MainLayout>
@@ -22,13 +22,14 @@ import MainLayout from '../layouts/MainLayout.astro';
     align-items: center;
     --flow-space: var(--size-900);
   }
-  .ohno {
-    font-size: calc(var(--size-900) * 2);
+  .error {
+    font-size: 6rem !important;
     color: var(--color-hover);
     line-height: 1;
   }
   .ohno-message {
     font-size: var(--size-700);
+    max-width: 20ch;
   }
   .fourohfour-link {
     font-size: var(--size-600);
