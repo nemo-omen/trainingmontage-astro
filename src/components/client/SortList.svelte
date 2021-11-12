@@ -1,5 +1,8 @@
 <script>
   import { onMount } from "svelte";
+  import { flip } from "svelte/animate";
+  import { quintOut } from "svelte/easing";
+
   export let list = [5, 7, 2, 0, 3, 8, 1, 9, 6, 4];
   $: elements = list;
 
@@ -8,6 +11,9 @@
 
   let compareList = [];
   $: compare = compareList;
+
+  let loop = 0;
+  $: loopCount = loop;
 
   let sortStarted = false;
 
@@ -28,30 +34,37 @@
     });
   }
 
-  function pause() {
+  function pause(time) {
     return new Promise((resolve, reject) => {
-      setTimeout(resolve, 500);
+      setTimeout(resolve, time);
     });
   }
 
-  async function bubbleSort(bsList) {
-    for (let i = 0; i < bsList.length - 1; i++) {
-      for (let j = 0; j < bsList.length - (i - 1); j++) {
-        (function (i, j) {
-          setTimeout(() => {
-            compare[0] = j;
-            compare[1] = j + 1;
+  async function bubbleSort() {
+    return new Promise(async (resolve, reject) => {
+      for (let i = 0; i < list.length - 1; i++) {
+        await pause(500);
+        loop++;
+        for (let j = 0; j < list.length - (i - 1); j++) {
+          await pause(250);
+          compare[0] = j;
+          compare[1] = j + 1;
 
-            if (bsList[j] > bsList[j + 1]) {
-              let temp = bsList[j];
-              bsList[j] = bsList[j + 1];
-              bsList[j + 1] = temp;
-            }
-            console.log(compare);
-          }, i + 500);
-        })(i, j);
+          if (list[j] > list[j + 1]) {
+            await swap(j, j + 1);
+          }
+        }
       }
-    }
+      compare = [0, 1];
+      resolve(false);
+    });
+  }
+
+  async function swap(j, k) {
+    let temp = list[j];
+    list[j] = list[k];
+    list[k] = temp;
+    await pause(500);
   }
 
   async function toggleSort() {
@@ -64,12 +77,16 @@
     //     currentIndex = 0;
     //   }, 1000);
     // });
-    bubbleSort(list);
+    sortStarted = await bubbleSort(list);
+    // pause().then(() => (sortStarted = false));
+    // sortStarted = false;
+    console.log("sortStarted: ", sortStarted);
   }
 
   // onMount(() => {});
 </script>
 
+<h2>Loop: {loopCount}</h2>
 <div class="list">
   {#if sortStarted === false}
     {#each elements as element}
@@ -78,8 +95,15 @@
       </div>
     {/each}
   {:else}
-    {#each elements as element, index}
-      <div class={selected === index ? "selected element" : "element"}>
+    {#each elements as element, index (element)}
+      <div
+        animate:flip={{ duration: 500, delay: 250, easing: quintOut }}
+        class={compare[0] === index
+          ? "selected element"
+          : compare[1] === index
+          ? "selected element"
+          : "element"}
+      >
         {element}
       </div>
     {/each}
