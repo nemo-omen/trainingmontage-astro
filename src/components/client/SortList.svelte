@@ -37,18 +37,19 @@
   async function bubbleSort(bsList) {
     for (let i = 0; i < bsList.length - 1; i++) {
       for (let j = 0; j < bsList.length - (i - 1); j++) {
-        pause().then(() => {
-          compare[0] = j;
-          compare[1] = j + 1;
+        (function (i, j) {
+          setTimeout(() => {
+            compare[0] = j;
+            compare[1] = j + 1;
 
-          console.log(compare);
-
-          if (bsList[j] > bsList[j + 1]) {
-            let temp = bsList[j];
-            bsList[j] = bsList[j + 1];
-            bsList[j + 1] = temp;
-          }
-        });
+            if (bsList[j] > bsList[j + 1]) {
+              let temp = bsList[j];
+              bsList[j] = bsList[j + 1];
+              bsList[j + 1] = temp;
+            }
+            console.log(compare);
+          }, i + 500);
+        })(i, j);
       }
     }
   }
