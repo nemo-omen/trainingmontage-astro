@@ -24,4 +24,4 @@ But all those sorting methods come from somewhere. Really good programmers have 
 
 Bubble sort is the probably the simplest sorting algorithm to implement. It works by looping through an array repeatedly and swapping adjacent elements if they're out of order. 
 
-<SortList client:visible/>
+<SortList client:load/>
