@@ -6,6 +6,9 @@
   let currentIndex = 0;
   $: selected = currentIndex;
 
+  let compareList = [];
+  $: compare = compareList;
+
   let sortStarted = false;
 
   function select(index) {
@@ -25,10 +28,42 @@
     });
   }
 
+  function pause() {
+    return new Promise((resolve, reject) => {
+      setTimeout(resolve, 500);
+    });
+  }
+
+  async function bubbleSort(bsList) {
+    for (let i = 0; i < bsList.length - 1; i++) {
+      for (let j = 0; j < bsList.length - (i - 1); j++) {
+        pause().then(() => {
+          compare[0] = j;
+          compare[1] = j + 1;
+
+          console.log(compare);
+
+          if (bsList[j] > bsList[j + 1]) {
+            let temp = bsList[j];
+            bsList[j] = bsList[j + 1];
+            bsList[j + 1] = temp;
+          }
+        });
+      }
+    }
+  }
+
   async function toggleSort() {
+    if (currentIndex > 0) currentIndex = 0;
     sortStarted = true;
     console.log("sort started: ", sortStarted);
-    iterate(list);
+    // iterate(list).then(() => {
+    //   setTimeout(() => {
+    //     sortStarted = false;
+    //     currentIndex = 0;
+    //   }, 1000);
+    // });
+    bubbleSort(list);
   }
 
   // onMount(() => {});
@@ -36,13 +71,13 @@
 
 <div class="list">
   {#if sortStarted === false}
-    {#each list as element}
+    {#each elements as element}
       <div class="element">
         {element}
       </div>
     {/each}
   {:else}
-    {#each list as element, index}
+    {#each elements as element, index}
       <div class={selected === index ? "selected element" : "element"}>
         {element}
       </div>
