@@ -75,13 +75,9 @@
   }
 
   async function resetList() {
-    await pause(3000);
+    await pause(1500);
     const replacementList = [5, 7, 2, 0, 3, 8, 1, 9, 6, 4];
-    // list = [...replacementList];
-    for (let elem of list) {
-      await pause(250);
-      list[replacementList.indexOf(elem)] = elem;
-    }
+    list = [...replacementList];
   }
 
   async function toggleSort() {
@@ -97,8 +93,11 @@
 <div class="example">
   <div class="list">
     {#if sortStarted === false}
-      {#each elements as element}
-        <div class="element">
+      {#each elements as element (element)}
+        <div
+          class="element"
+          animate:flip={{ duration: 500, delay: 250, easing: quintOut }}
+        >
           {element}
         </div>
       {/each}

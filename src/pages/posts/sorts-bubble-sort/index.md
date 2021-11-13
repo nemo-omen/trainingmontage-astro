@@ -39,8 +39,11 @@ function bubbleSort(array) {
 }
 ```
 
-Here's a simple visualization of what Bubble Sort looks like in action.
+Here's a visualization of what Bubble Sort looks like in action.
 
 <SortList client:visible/>
 
-There are a few things to note about the example above. First, you may have noticed that the loops continued once for each 
+There are a few things to note about the example above. First, you may have noticed that the loops continued once for each element in the array, even after the array was sorted. 
+
+There are some ways to lessen the number of inner loops, but in the end they don't really make this algorithm any more efficient.
+
