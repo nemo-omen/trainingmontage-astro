@@ -77,6 +77,14 @@ header, main {
   /* padding-inline: 1.5rem; */
 }
 
+.example {
+  margin-block: var(--size-800);
+}
+
+.example > * + * {
+  margin-top: var(--size-700);
+}
+
 footer {
   margin-top: auto;
 }

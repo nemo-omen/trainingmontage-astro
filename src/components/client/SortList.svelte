@@ -15,6 +15,9 @@
   let loop = 0;
   $: loopCount = loop;
 
+  let innerLoop = 0;
+  $: innerLoopCount = innerLoop;
+
   let sortStarted = false;
 
   function select(index) {
@@ -41,12 +44,16 @@
   }
 
   async function bubbleSort() {
+    list = [5, 7, 2, 0, 3, 8, 1, 9, 6, 4];
+    loop = 0;
+    innerLoop = 0;
     return new Promise(async (resolve, reject) => {
-      for (let i = 0; i < list.length - 1; i++) {
+      for (let i = 0; i < list.length; ++i) {
         await pause(500);
-        loop++;
-        for (let j = 0; j < list.length - (i - 1); j++) {
+        loop = i + 1;
+        for (let j = 0; j < list.length - 1; j++) {
           await pause(250);
+          innerLoop = j + 1;
           compare[0] = j;
           compare[1] = j + 1;
 
@@ -67,50 +74,54 @@
     await pause(500);
   }
 
+  async function resetList() {
+    await pause(3000);
+    const replacementList = [5, 7, 2, 0, 3, 8, 1, 9, 6, 4];
+    // list = [...replacementList];
+    for (let elem of list) {
+      await pause(250);
+      list[replacementList.indexOf(elem)] = elem;
+    }
+  }
+
   async function toggleSort() {
     if (currentIndex > 0) currentIndex = 0;
     sortStarted = true;
-    console.log("sort started: ", sortStarted);
-    // iterate(list).then(() => {
-    //   setTimeout(() => {
-    //     sortStarted = false;
-    //     currentIndex = 0;
-    //   }, 1000);
-    // });
     sortStarted = await bubbleSort(list);
-    // pause().then(() => (sortStarted = false));
-    // sortStarted = false;
-    console.log("sortStarted: ", sortStarted);
+    resetList();
   }
 
   // onMount(() => {});
 </script>
 
-<h2>Loop: {loopCount}</h2>
-<div class="list">
-  {#if sortStarted === false}
-    {#each elements as element}
-      <div class="element">
-        {element}
-      </div>
-    {/each}
-  {:else}
-    {#each elements as element, index (element)}
-      <div
-        animate:flip={{ duration: 500, delay: 250, easing: quintOut }}
-        class={compare[0] === index
-          ? "selected element"
-          : compare[1] === index
-          ? "selected element"
-          : "element"}
-      >
-        {element}
-      </div>
-    {/each}
-  {/if}
-</div>
-<div class="sort-control">
-  <button on:click={toggleSort}>&#9654;</button>
+<div class="example">
+  <div class="list">
+    {#if sortStarted === false}
+      {#each elements as element}
+        <div class="element">
+          {element}
+        </div>
+      {/each}
+    {:else}
+      {#each elements as element, index (element)}
+        <div
+          animate:flip={{ duration: 500, delay: 250, easing: quintOut }}
+          class={compare[0] === index
+            ? "selected element"
+            : compare[1] === index
+            ? "selected element"
+            : "element"}
+        >
+          {element}
+        </div>
+      {/each}
+    {/if}
+  </div>
+  <div class="sort-control">
+    <h2>Outer Loop Iterations: {loopCount}</h2>
+    <h2>Inner Loop Iterations: {innerLoopCount}</h2>
+    <button on:click={toggleSort}>&#9654;</button>
+  </div>
 </div>
 
 <style>
@@ -137,7 +148,13 @@
   }
   .sort-control {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--size-700);
+  }
+
+  h2 {
+    text-align: center;
   }
   button {
     color: var(--color-link);
