@@ -9,13 +9,17 @@
 export default /** @type {import('astro').AstroUserConfig} */ (
   {
     markdownOptions: {
-      remarkPlugins: [
-        // 'remark-prism',
-        // [import('remark-code-figure'), {captionOptions: {position: 'before'}}],
-        // 'remark-footnotes',
-        // '@silvenon/remark-smartypants',
-        // 'remark-gfm'
-      ],
+      // remarkPlugins: [
+      //   'remark-math',
+      //   'remark-prism',
+      //   [import('remark-code-figure'), {captionOptions: {position: 'before'}}],
+      //   'remark-footnotes',
+      //   '@silvenon/remark-smartypants',
+      //   'remark-gfm',
+      // ],
+      // rehypePlugins: [
+      //   'rehype-katex'
+      // ],
     },
     // Set "renderers" to "[]" to disable all default, builtin component support.
     renderers: [

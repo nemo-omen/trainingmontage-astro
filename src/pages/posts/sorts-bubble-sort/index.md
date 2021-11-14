@@ -1,6 +1,6 @@
 ---
 title: 'Sorts: Bubble Sort'
-date: 2021-11-11 21:54:31
+date: 2021-11-13 09:40:44
 tags: ["CS Basics", "Sorts", "Algorithms", "Bubble Sort"]
 description: In the first of a series about sorting algorithms, we explore the humble bubble sort.
 slug: sorts-bubble-sort
@@ -43,7 +43,8 @@ Here's a visualization of what Bubble Sort looks like in action.
 
 <SortList client:visible/>
 
-There are a few things to note about the example above. First, you may have noticed that the loops continued once for each element in the array, even after the array was sorted. 
+There are a few things to note about the example above. First, you may have noticed that the loops continued once for each element in the array, even after the array was sorted. There are some ways to lessen the number of inner loops, but in the end they don't really make this algorithm any more efficient. That's because we're running nested loops, which are usually bad news for an algorithm's efficiency.
 
-There are some ways to lessen the number of inner loops, but in the end they don't really make this algorithm any more efficient.
+
+### ___O___ (_n_<sup>2</sup>)
 
