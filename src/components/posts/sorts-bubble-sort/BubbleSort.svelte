@@ -67,6 +67,7 @@
       compare = [0, 1];
       resolve(false);
     });
+    0.0;
   }
 
   async function swap(j, k) {
@@ -83,10 +84,15 @@
   }
 
   async function toggleSort() {
-    if (currentIndex > 0) currentIndex = 0;
-    sortStarted = true;
-    sortStarted = await bubbleSort();
-    resetList();
+    if (!sortStarted) {
+      if (currentIndex > 0) currentIndex = 0;
+      sortStarted = true;
+      sortStarted = await bubbleSort();
+      resetList();
+    } else {
+      sortStarted = false;
+      resetList();
+    }
   }
 
   onMount(() => {
@@ -124,7 +130,7 @@
     <div class="sort-control">
       <h2>Outer Loop Iterations: {loopCount}</h2>
       <h2>Inner Loop Iterations: {innerLoopCount}</h2>
-      <button on:click={toggleSort}>&#9654;</button>
+      <button on:click={toggleSort} disabled={sortStarted}>&#9654;</button>
     </div>
   {/if}
 </div>
@@ -151,6 +157,12 @@
     background-color: var(--color-hover);
     color: var(--color-bg);
   }
+
+  .compare {
+    background-color: var(--color-link);
+    color: var(--color-bg);
+  }
+
   .sort-control {
     display: flex;
     flex-direction: column;
@@ -176,5 +188,9 @@
   button:hover {
     color: var(--color-hover);
     /* background-color: var(--color-hover); */
+  }
+  button:disabled {
+    cursor: not-allowed;
+    color: var(--color-link);
   }
 </style>
