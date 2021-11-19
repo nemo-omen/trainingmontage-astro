@@ -4,6 +4,8 @@
   import { quintOut } from "svelte/easing";
   import { fade } from "svelte/transition";
 
+  export let version = 1;
+
   export let list = [5, 7, 2, 0, 3, 8, 1, 9, 6, 4];
   let visible = false;
   $: elements = list;
@@ -69,6 +71,61 @@
     });
   }
 
+  async function bubbleSort2() {
+    list = [5, 7, 2, 0, 3, 8, 1, 9, 6, 4];
+    loop = 0;
+    innerLoop = 0;
+    return new Promise(async (resolve, reject) => {
+      for (let i = 0; i < list.length - 1; i++) {
+        await pause(500);
+        loop = i + 1;
+        for (let j = 0; j < list.length - i; j++) {
+          await pause(250);
+          innerLoop = j + 1;
+          compare[0] = j;
+          compare[1] = j + 1;
+
+          if (list[j] > list[j + 1]) {
+            await swap(j, j + 1);
+          }
+        }
+      }
+      compare = [0, 1];
+      resolve(false);
+    });
+  }
+
+  async function bubbleSort3() {
+    list = [5, 7, 2, 0, 3, 8, 1, 9, 6, 4];
+    loop = 0;
+    innerLoop = 0;
+    let swapped = false;
+    return new Promise(async (resolve, reject) => {
+      for (let i = 0; i < list.length - 1; i++) {
+        swapped = false;
+        await pause(500);
+        loop = i + 1;
+        for (let j = 0; j < list.length - i; j++) {
+          await pause(250);
+          innerLoop = j + 1;
+          compare[0] = j;
+          compare[1] = j + 1;
+
+          if (list[j] > list[j + 1]) {
+            await swap(j, j + 1);
+            swapped = true;
+          }
+        }
+        if (!swapped) {
+          return list;
+        }
+      }
+      compare = [0, 1];
+      resolve(false);
+      return list;
+    });
+  }
+
   async function swap(j, k) {
     let temp = list[j];
     list[j] = list[k];
@@ -85,7 +142,13 @@
   async function toggleSort() {
     if (currentIndex > 0) currentIndex = 0;
     sortStarted = true;
-    sortStarted = await bubbleSort(list);
+    if (version === 1) {
+      sortStarted = await bubbleSort();
+    } else if (version === 2) {
+      sortStarted = await bubbleSort2();
+    } else if (version === 3) {
+      sortStarted = await bubbleSort3();
+    }
     resetList();
   }
 
