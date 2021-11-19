@@ -4,8 +4,6 @@
   import { quintOut } from "svelte/easing";
   import { fade } from "svelte/transition";
 
-  export let version = 1;
-
   export let list = [5, 7, 2, 0, 3, 8, 1, 9, 6, 4];
   let visible = false;
   $: elements = list;
@@ -44,30 +42,6 @@
   function pause(time) {
     return new Promise((resolve, reject) => {
       setTimeout(resolve, time);
-    });
-  }
-
-  async function bubbleSort() {
-    list = [5, 7, 2, 0, 3, 8, 1, 9, 6, 4];
-    loop = 0;
-    innerLoop = 0;
-    return new Promise(async (resolve, reject) => {
-      for (let i = 0; i < list.length; ++i) {
-        await pause(500);
-        loop = i + 1;
-        for (let j = 0; j < list.length - 1; j++) {
-          await pause(250);
-          innerLoop = j + 1;
-          compare[0] = j;
-          compare[1] = j + 1;
-
-          if (list[j] > list[j + 1]) {
-            await swap(j, j + 1);
-          }
-        }
-      }
-      compare = [0, 1];
-      resolve(false);
     });
   }
 
@@ -142,13 +116,7 @@
   async function toggleSort() {
     if (currentIndex > 0) currentIndex = 0;
     sortStarted = true;
-    if (version === 1) {
-      sortStarted = await bubbleSort();
-    } else if (version === 2) {
-      sortStarted = await bubbleSort2();
-    } else if (version === 3) {
-      sortStarted = await bubbleSort3();
-    }
+    sortStarted = await bubbleSort2();
     resetList();
   }
 

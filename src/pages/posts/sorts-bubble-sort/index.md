@@ -9,7 +9,9 @@ layout: ../../../layouts/BlogLayout.astro
 id: 0896e28f-0010-473b-b679-ded5023da3a2
 setup:  |
   import TOC from '../../../components/TOC.astro';
-  import BubbleSort from '../../../components/client/BubbleSort.svelte';
+  import BubbleSort from '../../../components/posts/sorts-bubble-sort/BubbleSort.svelte';
+  import BubbleSort2 from '../../../components/posts/sorts-bubble-sort/BubbleSort2.svelte';
+  import BubbleSort3 from '../../../components/posts/sorts-bubble-sort/BubbleSort3.svelte';
   permalinks = ['https://trainingmontage.dev/posts/sorts-bubble-sort/']
   titles = ['Sorts: Bubble Sort']
 ---
@@ -26,7 +28,7 @@ Bubble sort is the probably the simplest sorting algorithm to implement. It work
 Here's the code for a very basic bubble sort implementation:
 
 ```js
-function bubbleSort(array) {
+function bubbleSort(list) {
   for (let i = 0; i < list.length; ++i) {
     for (let j = 0; j < list.length - 1; j++) {
       if (list[j] < list[j + 1]) {
@@ -36,12 +38,13 @@ function bubbleSort(array) {
       }
     }
   }
+  return list;
 }
 ```
 
 Here's a visualization of what bubble sort looks like in action (kind of).
 
-<BubbleSort version={1} client:visible/>
+<BubbleSort client:visible/>
 
 There are a few things to note about the example above. First, you may have noticed that the loops continued once for each element in the array, even after the array was sorted. 
 
@@ -56,15 +59,24 @@ The first thing we can do to make bubble sort a bit more efficient is to reduce 
 This means we can make sure we're running the inner loop one less time with each pass of the outer loop.
 
 ```js
-for (let i = 0; i < list.length - 1; ++i) {
+function bubbleSort(list) {
+  let swapped = false;
+  for (let i = 0; i < list.length - 1; ++i) {
+    swapped = false;
     for (let j = 0; j < list.length - i; j++) {
       if (list[j] < list[j + 1]) {
         let temp = list[j];
         list[j] = list[j + 1];
         list[j + 1] = temp;
+        swapped = true;
+      }
+
+      if(!swapped) {
+        return list;
       }
     }
   }
+  return list;
 }
 ```
 
@@ -74,14 +86,14 @@ Then, in the inner loop, we switch from running while `j < list.length - 1` to r
 
 Let's see how that changed things for our sort.
 
-<BubbleSort version={2} client:visible />
+<BubbleSort2 client:visible />
 
 Okay, that's a little better. But it's still running after all of the elements in the array have been sorted. We don't want that.
 
 What we need is some way to check whether the inner loop has completed without swapping any numbers.
 
 
-<BubbleSort version={3} client:visible />
+<BubbleSort3 client:visible />
 
 That's because we're running nested loops, which are usually bad news for an algorithm's efficiency.
 
