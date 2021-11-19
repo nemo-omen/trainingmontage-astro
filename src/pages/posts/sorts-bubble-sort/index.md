@@ -44,7 +44,7 @@ function bubbleSort(list) {
 
 Here's a visualization of what bubble sort looks like in action (kind of).
 
-<BubbleSort client:visible/>
+<BubbleSort version={1} client:visible/>
 
 There are a few things to note about the example above. First, you may have noticed that the loops continued once for each element in the array, even after the array was sorted. 
 
