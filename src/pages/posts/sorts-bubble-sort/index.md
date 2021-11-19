@@ -43,7 +43,12 @@ Here's a visualization of what Bubble Sort looks like in action.
 
 <SortList client:visible/>
 
-There are a few things to note about the example above. First, you may have noticed that the loops continued once for each element in the array, even after the array was sorted. There are some ways to lessen the number of inner loops, but in the end they don't really make this algorithm any more efficient. That's because we're running nested loops, which are usually bad news for an algorithm's efficiency.
+There are a few things to note about the example above. First, you may have noticed that the loops continued once for each element in the array, even after the array was sorted. 
+
+That's because this is a _very bad_ implementation of Bubble Sort. There are some ways to lessen the number of inner loops, and that will help with efficiency a bit. Let's look at those now.
+
+
+Once we compare this to other sorting algorithms, though, it's still _suuuuuper sloooow_. That's because we're running nested loops, which are usually bad news for an algorithm's efficiency.
 
 
 ### ___O___ (_n_<sup>2</sup>)

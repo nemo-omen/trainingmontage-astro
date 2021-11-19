@@ -2,6 +2,9 @@
   import { onMount } from "svelte";
   import { flip } from "svelte/animate";
   import { quintOut } from "svelte/easing";
+  import { slide, fade } from "svelte/transition";
+
+  let visible = false;
 
   export let list = [5, 7, 2, 0, 3, 8, 1, 9, 6, 4];
   $: elements = list;
@@ -87,40 +90,44 @@
     resetList();
   }
 
-  // onMount(() => {});
+  onMount(() => {
+    visible = true;
+  });
 </script>
 
 <div class="example">
-  <div class="list">
-    {#if sortStarted === false}
-      {#each elements as element (element)}
-        <div
-          class="element"
-          animate:flip={{ duration: 500, delay: 250, easing: quintOut }}
-        >
-          {element}
-        </div>
-      {/each}
-    {:else}
-      {#each elements as element, index (element)}
-        <div
-          animate:flip={{ duration: 500, delay: 250, easing: quintOut }}
-          class={compare[0] === index
-            ? "selected element"
-            : compare[1] === index
-            ? "selected element"
-            : "element"}
-        >
-          {element}
-        </div>
-      {/each}
-    {/if}
-  </div>
-  <div class="sort-control">
-    <h2>Outer Loop Iterations: {loopCount}</h2>
-    <h2>Inner Loop Iterations: {innerLoopCount}</h2>
-    <button on:click={toggleSort}>&#9654;</button>
-  </div>
+  {#if visible}
+    <div class="list" transition:fade>
+      {#if sortStarted === false}
+        {#each elements as element (element)}
+          <div
+            class="element"
+            animate:flip={{ duration: 500, delay: 250, easing: quintOut }}
+          >
+            {element}
+          </div>
+        {/each}
+      {:else}
+        {#each elements as element, index (element)}
+          <div
+            animate:flip={{ duration: 500, delay: 250, easing: quintOut }}
+            class={compare[0] === index
+              ? "selected element"
+              : compare[1] === index
+              ? "selected element"
+              : "element"}
+          >
+            {element}
+          </div>
+        {/each}
+      {/if}
+    </div>
+    <div class="sort-control">
+      <h2>Outer Loop Iterations: {loopCount}</h2>
+      <h2>Inner Loop Iterations: {innerLoopCount}</h2>
+      <button on:click={toggleSort}>&#9654;</button>
+    </div>
+  {/if}
 </div>
 
 <style>
