@@ -1,4 +1,4 @@
-<html><head>
+<!DOCTYPE html><html><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
   <title>Sorts: Bubble Sort</title>
@@ -12,7 +12,10 @@
   <link rel="stylesheet" href="/style/home.css">
   <link rel="stylesheet" href="/style/text.css">
   
-<script type="module" src="../../assets/sorts-bubble-sort.bc22b924.js"></script></head><body><meta name="title" content="Sorts: Bubble Sort">
+
+<script type="module" src="../../assets/sorts-bubble-sort.e01563a5.js"></script>
+
+</head><body><meta name="title" content="Sorts: Bubble Sort">
 <meta name="description" content="In the first of a series about sorting algorithms, we explore the humble bubble sort.">
 <link rel="stylesheet" href="/style/blog.css">
 
@@ -28,7 +31,9 @@
 <meta property="twitter:url" content="https://trainingmontage.dev/posts/sorts-bubble-sort">
 <meta property="twitter:title" content="Sorts: Bubble Sort">
 <meta property="twitter:description" content="In the first of a series about sorting algorithms, we explore the humble bubble sort.">
-<meta property="twitter:image" content="https://trainingmontage.dev/assets/images/Optimized-DishCloudsCrop.jpg"><link rel="stylesheet" href="../../assets/cs-basics-hex-and-32-bit-conversion.a1d081e6.css"><link rel="stylesheet" href="../../assets/prism-nord.d3e627ad.css"><link rel="stylesheet" href="../../assets/SortList.svelte_svelte&amp;type=style&amp;lang.075ca782.css">
+<meta property="twitter:image" content="https://trainingmontage.dev/assets/images/Optimized-DishCloudsCrop.jpg"><link rel="stylesheet" href="../../assets/sorts-bubble-sort.73770f66.css"><link rel="stylesheet" href="../../assets/prism-nord.a415b6c0.css"><link rel="stylesheet" href="../../assets/BubbleSort3.svelte_svelte&amp;type=style&amp;lang.24d48337.css">
+
+
 
 
 
@@ -58,19 +63,16 @@
           <section class="post-header flow">
               <h2 class="post-title">Sorts: Bubble Sort</h2>
               <time>
-                Thursday, November 11, 2021
+                Saturday, November 13, 2021
               </time>
               <ul class="tags-list">
                 <li class="tag-item">
                     <a href="/tag/CS Basics" class="post-tag">CS Basics</a>
-                  </li>
-<li class="tag-item">
+                  </li><li class="tag-item">
                     <a href="/tag/Sorts" class="post-tag">Sorts</a>
-                  </li>
-<li class="tag-item">
+                  </li><li class="tag-item">
                     <a href="/tag/Algorithms" class="post-tag">Algorithms</a>
-                  </li>
-<li class="tag-item">
+                  </li><li class="tag-item">
                     <a href="/tag/Bubble Sort" class="post-tag">Bubble Sort</a>
                   </li>
               </ul>
@@ -86,20 +88,39 @@
       <li><a href="https://trainingmontage.dev/posts/sorts-bubble-sort/">Sorts: Bubble Sort</a></li>
     </ol>
   </div>
-</div><p>One of the things developers have to do is sort things. Programming languages have made sorting trivial, for the most part. When something needs sorting, we just call the appropriate sorting method supplied by the language and don't need to think twice about it.</p><p>But all those sorting methods come from somewhere. Really good programmers have engineered your sorting method so it performs optimally no matter how many elements are thrown at it. Learning how to approach the problem of sorting is a foundational skill in programming and computer science, so we're going to tackle 7 basic algorithms and learn how they stack up against each other.</p><h2 id="bubble-sort">Bubble Sort</h2><p>Bubble sort is the probably the simplest sorting algorithm to implement. It works by looping through an array repeatedly and swapping adjacent elements if they're out of order.</p><p>Here's a simple visualization of what Bubble Sort looks like in action.</p><astro-root uid="1m6vkR"><div class="example"><div class="list svelte-1vizf8m"><div class="element svelte-1vizf8m">5
-        </div><div class="element svelte-1vizf8m">7
-        </div><div class="element svelte-1vizf8m">2
-        </div><div class="element svelte-1vizf8m">0
-        </div><div class="element svelte-1vizf8m">3
-        </div><div class="element svelte-1vizf8m">8
-        </div><div class="element svelte-1vizf8m">1
-        </div><div class="element svelte-1vizf8m">9
-        </div><div class="element svelte-1vizf8m">6
-        </div><div class="element svelte-1vizf8m">4
-        </div></div>
-  <div class="sort-control svelte-1vizf8m"><h2 class="svelte-1vizf8m">Loops: 0</h2>
-    <button class="svelte-1vizf8m">▶</button></div>
-</div></astro-root>
+</div><p>One of the things developers have to do is sort things. Programming languages have made sorting trivial, for the most part. When something needs sorting, we just call the appropriate sorting method supplied by the language and don’t need to think twice about it.</p><p>But all those sorting methods come from somewhere. Really good programmers have engineered your sorting method so it performs optimally no matter how many elements are thrown at it. Learning how to approach the problem of sorting is a foundational skill in programming and computer science, so we’re going to tackle 7 basic algorithms and learn how they stack up against each other.</p><h2 id="bubble-sort">Bubble Sort</h2><p>Bubble sort is the probably the simplest sorting algorithm to implement. It works by looping through an array repeatedly and swapping adjacent elements if they’re out of order.</p><p>Here’s the code for a very basic bubble sort implementation:</p><pre class="language-js"><code data-astro-raw="" class="language-js"><span class="token keyword">function</span> <span class="token function">bubbleSort</span><span class="token punctuation">(</span><span class="token parameter">list</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> list<span class="token punctuation">.</span>length<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> list<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>list<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&lt;</span> list<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> temp <span class="token operator">=</span> list<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        list<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> list<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        list<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> list<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre><p>Here’s a visualization of what bubble sort looks like in action (kind of).</p><astro-root uid="ZzjyXk"><div class="example">
+</div></astro-root><p>There are a few things to note about the example above. First, you may have noticed that the loops continued once for each element in the array, even after the array was sorted.</p><p>That’s because this is a <em>really bad</em> implementation of bubble sort.</p><p>There are some ways to lessen the number of inner loops. Let’s look at them.</p><h3 id="making-bubble-sort-a-little-faster">Making Bubble Sort (a little) Faster</h3><p>The first thing we can do to make bubble sort a bit more efficient is to reduce the number of times the inner loop runs. If you watch the animation above again, you’ll see a neat feature of bubble sort — the largest elements naturally move to the end of the array on each pass of the outer loop. One might even say those elements <em>bubble</em> to the end.</p><p>This means we can make sure we’re running the inner loop one less time with each pass of the outer loop.</p><pre class="language-js"><code data-astro-raw="" class="language-js"><span class="token keyword">function</span> <span class="token function">bubbleSort</span><span class="token punctuation">(</span><span class="token parameter">list</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> swapped <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> list<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    swapped <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> list<span class="token punctuation">.</span>length <span class="token operator">-</span> i<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>list<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&lt;</span> list<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> temp <span class="token operator">=</span> list<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        list<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> list<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        list<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+        swapped <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>swapped<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> list<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> list<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre><p>We’ve made two changes to the code. First, instead of iterating the outer loop while <code data-astro-raw="">i &lt; list.length</code>, we’re running it while <code data-astro-raw="">i &lt; list.length - 1</code>.</p><p>Then, in the inner loop, we switch from running while <code data-astro-raw="">j &lt; list.length - 1</code> to running while <code data-astro-raw="">j &lt; list.length - i</code>. This will allow us to run the loop one less time for each pass of the outer loop because <code data-astro-raw="">i</code> is increasing by one each time it iterates. By subtracting that value from the loop condition in the inner loop, we run once less.</p><p>Let’s see how that changed things for our sort.</p><astro-root uid="ZU54ks"><div class="example">
+</div></astro-root><p>Okay, that’s a little better. But it’s still running after all of the elements in the array have been sorted. We don’t want that.</p><p>What we need is some way to check whether the inner loop has completed without swapping any numbers.</p><astro-root uid="Nt8Uo"><div class="example">
+</div></astro-root><p>That’s because we’re running nested loops, which are usually bad news for an algorithm’s efficiency.</p><h3 id="o-n2"><em><strong>O</strong></em> (<em>n</em><sup>2</sup>)</h3>
           </section>
         </article>
         </main>

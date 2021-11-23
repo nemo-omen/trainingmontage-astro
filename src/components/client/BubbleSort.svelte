@@ -24,6 +24,12 @@
 
   let sortStarted = false;
 
+  const methods = {
+    1: bubbleSort(),
+    2: bubbleSort2(),
+    3: bubbleSort3(),
+  };
+
   function select(index) {
     return new Promise((resolve, reject) => {
       setTimeout(resolve, 500);
@@ -48,6 +54,8 @@
   }
 
   async function bubbleSort() {
+    console.log("1");
+
     list = [5, 7, 2, 0, 3, 8, 1, 9, 6, 4];
     loop = 0;
     innerLoop = 0;
@@ -72,6 +80,8 @@
   }
 
   async function bubbleSort2() {
+    console.log("2");
+
     list = [5, 7, 2, 0, 3, 8, 1, 9, 6, 4];
     loop = 0;
     innerLoop = 0;
@@ -96,6 +106,8 @@
   }
 
   async function bubbleSort3() {
+    console.log("3");
+
     list = [5, 7, 2, 0, 3, 8, 1, 9, 6, 4];
     loop = 0;
     innerLoop = 0;
@@ -142,13 +154,7 @@
   async function toggleSort() {
     if (currentIndex > 0) currentIndex = 0;
     sortStarted = true;
-    if (version === 1) {
-      sortStarted = await bubbleSort();
-    } else if (version === 2) {
-      sortStarted = await bubbleSort2();
-    } else if (version === 3) {
-      sortStarted = await bubbleSort3();
-    }
+    methods[version];
     resetList();
   }
 

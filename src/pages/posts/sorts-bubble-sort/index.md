@@ -86,14 +86,14 @@ Then, in the inner loop, we switch from running while `j < list.length - 1` to r
 
 Let's see how that changed things for our sort.
 
-<BubbleSort2 client:visible />
+<BubbleSort2 version={2} client:visible />
 
 Okay, that's a little better. But it's still running after all of the elements in the array have been sorted. We don't want that.
 
 What we need is some way to check whether the inner loop has completed without swapping any numbers.
 
 
-<BubbleSort3 client:visible />
+<BubbleSort3 version={3} client:visible />
 
 That's because we're running nested loops, which are usually bad news for an algorithm's efficiency.
 
