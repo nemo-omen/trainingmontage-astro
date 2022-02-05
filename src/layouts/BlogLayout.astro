@@ -14,14 +14,15 @@
     return str.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '').split(' ').join('-');
   }
 ---
-
-<BaseHeadLayout title={content.title}>
-  <BlogHeadLayout
-    title={content.title} 
-    description={content.description}
-    permalink={permalink}
-  />
-</BaseHeadLayout>
+<head>
+  <BaseHeadLayout title={content.title}>
+    <BlogHeadLayout
+      title={content.title} 
+      description={content.description}
+      permalink={permalink}
+    />
+  </BaseHeadLayout>
+</head>
 
 <body>
     <Header />

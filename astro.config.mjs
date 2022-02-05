@@ -6,24 +6,15 @@
 // You can disable this by removing "@ts-check" and `@type` comments below.
 
 // @ts-check
+
 export default /** @type {import('astro').AstroUserConfig} */ (
-  {
-    markdownOptions: {
-      remarkPlugins: [
-        // [import('remark-code-figure'), {captionOptions: {position: 'before'}}],
-        // 'remark-footnotes',
-        '@silvenon/remark-smartypants',
-        'remark-gfm',
-        'remark-math',
-      ],
-      rehypePlugins: [
-        'rehype-katex'
-      ],
-    },
-    // Set "renderers" to "[]" to disable all default, builtin component support.
-    renderers: [
-      '@astrojs/renderer-svelte'
-    ],
+	{
+		// Set "renderers" to "[]" to disable all default, builtin component support.
+		renderers: [
+			'@astrojs/renderer-svelte'
+		],
+		// vite: {
+		// }
     buildOptions: {
       site: "https://trainingmontage.dev/",
       sitemap: true,

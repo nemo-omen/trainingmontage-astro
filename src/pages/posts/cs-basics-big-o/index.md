@@ -7,6 +7,7 @@ slug: big-o
 permalink: https://trainingmontage.dev/posts/cs-basics-big-o/
 layout: ../../../layouts/BlogLayout.astro
 id: db39873f-119c-4728-9676-8a03f7fb9a42
+draft: true
 setup:  |
   import TOC from '../../../components/TOC.astro';
   import SortList from '../../../components/client/SortList.svelte';

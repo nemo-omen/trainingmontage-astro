@@ -7,13 +7,14 @@ slug: sorts-bubble-sort
 permalink: https://trainingmontage.dev/posts/sorts-bubble-sort/
 layout: ../../../layouts/BlogLayout.astro
 id: 0896e28f-0010-473b-b679-ded5023da3a2
-setup:  |
+draft: true
+setup: |
   import TOC from '../../../components/TOC.astro';
   import BubbleSort from '../../../components/posts/sorts-bubble-sort/BubbleSort.svelte';
   import BubbleSort2 from '../../../components/posts/sorts-bubble-sort/BubbleSort2.svelte';
   import BubbleSort3 from '../../../components/posts/sorts-bubble-sort/BubbleSort3.svelte';
-  permalinks = ['https://trainingmontage.dev/posts/sorts-bubble-sort/']
   titles = ['Sorts: Bubble Sort']
+  permalinks = ['https://trainingmontage.dev/posts/sorts-bubble-sort/']
 ---
 
 <TOC description="This is the first in a series about sorting algorithms. You can find all the posts in the series below." permalinks={permalinks} titles={titles} />
@@ -44,7 +45,7 @@ function bubbleSort(list) {
 
 Here's a visualization of what bubble sort looks like in action (kind of).
 
-<BubbleSort version={1} client:visible/>
+<BubbleSort version={1} client:load/>
 
 There are a few things to note about the example above. First, you may have noticed that the loops continued once for each element in the array, even after the array was sorted. 
 
@@ -86,14 +87,14 @@ Then, in the inner loop, we switch from running while `j < list.length - 1` to r
 
 Let's see how that changed things for our sort.
 
-<BubbleSort2 version={2} client:visible />
+<BubbleSort2 version={2} client:load />
 
 Okay, that's a little better. But it's still running after all of the elements in the array have been sorted. We don't want that.
 
 What we need is some way to check whether the inner loop has completed without swapping any numbers.
 
 
-<BubbleSort3 version={3} client:visible />
+<BubbleSort3 version={3} client:load />
 
 That's because we're running nested loops, which are usually bad news for an algorithm's efficiency.
 
