@@ -4,7 +4,9 @@ import BlogPreview from '../components/BlogPreview.astro';
 
     let mdPosts = Astro.fetchContent('./posts/*/*.md');
     let allPosts = [...mdPosts];
-    allPosts = allPosts.sort((a,b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
+    allPosts = allPosts
+        .filter((post) => post.draft !== true)
+        .sort((a,b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
 ---
 
 <MainLayout title="trainingmontage — writing and web dev">
