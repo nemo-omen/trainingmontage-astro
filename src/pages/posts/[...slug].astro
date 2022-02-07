@@ -1,22 +1,14 @@
 ---
-  import MainLayout from '../../layouts/MainLayout.astro';
-  import BlogPreview from '../../components/BlogPreview.astro';
-  const { slug } = Astro.request.params;
-  const { posts } = Astro.props;
-
   export async function getStaticPaths({rss}) {
     const posts = Astro.fetchContent('./**/*.md');
     const filtered = posts.filter((post) => post.draft !== true);
     const sortedPosts = filtered.sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
 
     rss({
-    // The RSS Feed title, description, and custom metadata.
     title: 'Trainingmontage — Web Dev & Writing',
-    // See "Styling" section below
     stylesheet: true,
     description: 'I make cool things for the web and write about what I learn.',
     customData: `<language>en-us</language>`,
-    // The list of items for your RSS feed, sorted.
     items: sortedPosts.map(item => ({
       title: item.title,
       link: item.url,
@@ -24,8 +16,6 @@
       author: 'Jeff Caldwell',
       description: item.content.html
     })),
-    // Optional: Customize where the file is written to.
-    // Otherwise, defaults to "/rss.xml"
     dest: "/feed.xml",
   });
   // Return your paths
