@@ -1,0 +1,71 @@
+.post {
+  --flow-space: var(--size-700);
+}
+
+.component-post {
+  margin-inline: var(--size-700);
+}
+
+.post-header {
+  --flow-space: var(--size-400);
+}
+
+.post-title {
+  font-size: var(--size-800);
+  color: var(--color-link);
+}
+
+.post time {
+  --flow-space: var(--size-400);
+  display: block;
+  font-size: var(--size-500);
+  letter-spacing: 0.1em;
+}
+
+.post :is(h2, h3) {
+  --flow-space: var(--size-900);
+}
+
+.post :is(h2, h3) + * {
+  --flow-space: var(--size-400);
+}
+
+.post figure,
+.post figure + * {
+  --flow-space: var(--size-900);
+}
+.post-subhead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+table, th, tr, td {
+  text-align: center;
+  border: 1px solid var(--color-hover);
+}
+
+td, th {
+  padding: 0.5rem;
+}
+
+td:not(.table-head-cell):hover {
+  background-color: var(--color-muted-highlight);
+}
+
+th, .table-head-cell {
+  font-size: var(--size-500);
+  font-weight: 600;
+  background-color: var(--color-hover);
+  border: 1px solid var(--color-bg);
+}
+
+.table-highlight {
+  background: rgb(var(--rgb-color-hover), 0.3);
+}

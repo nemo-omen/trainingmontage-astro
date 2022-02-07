@@ -1,0 +1,275 @@
+<!DOCTYPE html><html><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>CS Basics: Hex and 32 bit Conversion</title>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.ico">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff8a01">
+
+  <link rel="stylesheet" href="/style/global.css">
+  <link rel="stylesheet" href="/style/fonts.css">
+  <link rel="stylesheet" href="/style/home.css">
+  <link rel="stylesheet" href="/style/text.css">
+  
+</head><body><meta name="title" content="CS Basics: Hex and 32 bit Conversion">
+<meta name="description" content="Once you have a handle on basic numeral systems like binary, it's time to move on to more complicated systems. We'll cover hexadecimal and 32 bit numbers in the second CS Basics post.">
+<link rel="stylesheet" href="/style/blog.css">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://trainingmontage.dev/posts/cs-basics-hex-and-32-bit-conversion">
+<meta property="og:title" content="CS Basics: Hex and 32 bit Conversion">
+<meta property="og:description" content="Once you have a handle on basic numeral systems like binary, it's time to move on to more complicated systems. We'll cover hexadecimal and 32 bit numbers in the second CS Basics post.">
+<meta property="og:image" content="https://trainingmontage.dev/assets/images/Optimized-DishCloudsCrop.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://trainingmontage.dev/posts/cs-basics-hex-and-32-bit-conversion">
+<meta property="twitter:title" content="CS Basics: Hex and 32 bit Conversion">
+<meta property="twitter:description" content="Once you have a handle on basic numeral systems like binary, it's time to move on to more complicated systems. We'll cover hexadecimal and 32 bit numbers in the second CS Basics post.">
+<meta property="twitter:image" content="https://trainingmontage.dev/assets/images/Optimized-DishCloudsCrop.jpg">
+<link rel="stylesheet" href="../../assets/cs-basics-detour--nibbles-msb-and-lsb.fd753561.css"><link rel="stylesheet" href="../../assets/prism-nord.a415b6c0.css">
+
+
+
+    
+<header role="banner" class="astro-P4SNZADR">
+<div id="header-main" class="astro-P4SNZADR">
+  <h1 id="site-home" class="astro-P4SNZADR">
+    <a href="/" aria-label="TrainingMontage — Home" class="astro-P4SNZADR">
+      TrainingMontage
+    </a>
+  </h1>
+  <p id="site-tagline" class="astro-P4SNZADR">web-dev / Writing</p>
+</div>
+<nav aria-label="primary" tabindex="-1" class="astro-P4SNZADR">
+  <a href="/" class="astro-P4SNZADR">Home</a>
+  <a href="/about" class="astro-P4SNZADR">About</a>
+</nav>
+</header>
+
+
+    <div id="content">
+        <main tabindex="-1">
+        <article class="post flow">
+          <section class="post-header flow">
+              <h2 class="post-title">CS Basics: Hex and 32 bit Conversion</h2>
+              <time>
+                Monday, October 4, 2021
+              </time>
+              <ul class="tags-list">
+                <li class="tag-item">
+                    <a href="/tag/CS Basics" class="post-tag">CS Basics</a>
+                  </li><li class="tag-item">
+                    <a href="/tag/Hexadecimal" class="post-tag">Hexadecimal</a>
+                  </li><li class="tag-item">
+                    <a href="/tag/32 Bit Numbers" class="post-tag">32 Bit Numbers</a>
+                  </li><li class="tag-item">
+                    <a href="/tag/Number Base Conversion" class="post-tag">Number Base Conversion</a>
+                  </li>
+              </ul>
+          </section>
+          <section class="post-content flow">
+            <div class="toc">
+  <div class="flow">
+    <p>
+      This post is the 2nd in a series about basic concepts in programming and Computer Science. You can find all the posts in the series below.
+    </p>
+    <ol>
+      <li>
+        <a href="/posts/cs-basics-binary-conversion">CS Basics: Binary Conversion</a>
+      </li>
+      <li>
+        <a href="/posts/cs-basics-hex-and-32-bit-conversion">CS Basics: Hex and 32 Bit Conversion</a>
+      </li>
+      <li>
+        <a href="/posts/cs-basics-detour--nibbles-msb-and-lsb">CS Basics: Detour - Nibbles, MSB, and LSB</a>
+      </li>
+      <li>
+        <a href="/posts/cs-basics-converting-between-different-bases">CS Basics: Converting Between Different Bases</a>
+      </li>
+    </ol>
+  </div>
+</div><p>In the <a href="/posts/cs-basics-binary-conversion">last post</a> in this series, we covered converting binary, quaternary, and octal numbers. Now we’ll go through hexadecimal and 32 bit numbers. If you haven’t read the first post, go ahead and read it now then come back.</p><p>Converting hex and 32 bit numbers is pretty close to the same as converting smaller bases, but there’s one important difference — we have to be able to account for numbers larger than 9.</p><p>We already know that the decimal system, or regular integers, can go from 0 - 9 in each digit. The trouble with something like hexadecimal, or Base16, numbers (and higher) is that there’s no way to represent something larger than 9 with a single-digit integer.</p><p>So what do we do?</p><p>Well, we use letter characters.</p><p>For hex and 32-bit numbers 0 - 9 are the same as decimal. When the digit gets larger than 9 we use letters.</p><p><strong>Hex</strong>: 1 - 9, A - F</p><p><strong>32 Bit</strong>: 1 - 9, A - V</p><p>That’s it!</p><h3 id="hexadecimal-base16">Hexadecimal (Base16)</h3><table>
+<thead>
+<tr>
+<th></th>
+<th>65536</th>
+<th>4096</th>
+<th>256</th>
+<th>16</th>
+<th>1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>10</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>A</td>
+</tr>
+<tr>
+<td>11</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>B</td>
+</tr>
+<tr>
+<td>12</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>C</td>
+</tr>
+<tr>
+<td>13</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>D</td>
+</tr>
+<tr>
+<td>14</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>E</td>
+</tr>
+<tr>
+<td>15</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>F</td>
+</tr>
+<tr>
+<td>16</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>17</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>26</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>A</td>
+</tr>
+</tbody>
+</table><p>As you can see, each digit in hexadecimal can represent 16 unique numbers.</p>
+Two digits can represent 256 unique numbers. If you’ve used hex colors, you’re using hexadecimal numbers with six digits. That’s 
+<span class="highlight">
+256
+<sup>
+3
+</sup>
+</span>
+, or 16,777,216, color values.
+<p>Honestly, this table could go on forever, so I’m going to whip up a hex multiplication table with client-side JavaScript and you can use that for reference if you need to.</p><p>JavaScript provides some nice convenience methods for converting a binary number to a different base representation. To get the values for the table below, all I had to do was multiply two values and then write <code data-astro-raw="">cellValue = product.toString(16)</code>, which will convert an integer to a string that represents the given base’s value.</p><table id="hex-table">
+</table><script>
+  const vals = [' ', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
+  const nums = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
+
+  const table = document.getElementById('hex-table');
+  let head = table.createTHead();
+  let row = head.insertRow();
+  for(let key of vals) {
+    let th = document.createElement('th');
+    let text = document.createTextNode(key);
+    th.appendChild(text);
+    row.appendChild(th);
+  }
+
+  for(let i = 0; i < vals.length - 1; i++) {
+    let row = table.insertRow();
+    let cell = row.insertCell();
+    cell.className = 'table-head-cell';
+    let text = document.createTextNode(vals[i + 1]);
+    cell.appendChild(text);
+    for(let j = 0; j < nums.length - 1; j++) {
+      let tcell = row.insertCell();
+      const numValue = nums[i] * nums[j];
+      const conVal = numValue.toString(16).toUpperCase();
+      let ttext = document.createTextNode(conVal);
+      tcell.appendChild(ttext);
+      // console.log(nums[i] * nums[j]);
+    }
+  }
+</script><p>So, that leaves 32-bit conversions. Those behave exactly the same as hexadecimal conversions, but since we’re dealing with numbers larger than 15, we need to include additional substitution characters.</p><p>Two 32-bit digits can account for 1,024 decimal numbers.</p><p>Here’s a 32-bit table (hopefully the table works for smaller screens, because it’s going to be pretty big).</p><table id="table-thirtytwo">
+</table><script>
+  const vals32 = [' ', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V'];
+  const nums32 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32];
+
+  const table32 = document.getElementById('table-thirtytwo');
+  let head32 = table32.createTHead();
+  let row32 = head32.insertRow();
+  for(let key of vals32) {
+    let th32 = document.createElement('th');
+    let text32 = document.createTextNode(key);
+    th32.appendChild(text32);
+    row32.appendChild(th32);
+  }
+
+  for(let i = 0; i < vals32.length - 1; i++) {
+    let row32 = table32.insertRow();
+    let cell32 = row32.insertCell();
+    cell32.className = 'table-head-cell';
+    let text32 = document.createTextNode(vals32[i + 1]);
+    cell32.appendChild(text32);
+    for(let j = 0; j < nums32.length - 1; j++) {
+      let tcell32 = row32.insertCell();
+      const numValue32 = nums32[i] * nums32[j];
+      const conVal32 = numValue32.toString(32).toUpperCase();
+      let ttext32 = document.createTextNode(conVal32);
+      tcell32.appendChild(ttext32);
+      // console.log(nums[i] * nums[j]);
+    }
+  }
+</script><p>Next time we’ll go over converting from one non-decimal base, like binary, to another base, like hex.</p>
+          </section>
+        </article>
+        </main>
+    </div>
+    
+<footer role="content-info" class="astro-WPVQXCCW">
+  <p class="astro-WPVQXCCW">© 2022 Jeff Caldwell</p>
+</footer>
+
+
+</body></html>

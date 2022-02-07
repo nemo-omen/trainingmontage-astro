@@ -1,0 +1,37 @@
+---
+  import MainLayout from '../../layouts/MainLayout.astro';
+  import BlogPreview from '../../components/BlogPreview.astro';
+  const { slug } = Astro.request.params;
+  const { posts } = Astro.props;
+
+  export async function getStaticPaths({rss}) {
+    const posts = Astro.fetchContent('./**/*.md');
+    const sortedPosts = posts.sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
+
+    rss({
+    // The RSS Feed title, description, and custom metadata.
+    title: 'Don\'s Blog',
+    // See "Styling" section below
+    stylesheet: true,
+    description: 'An example blog on Astro',
+    customData: `<language>en-us</language>`,
+    // The list of items for your RSS feed, sorted.
+    items: sortedPosts.map(item => ({
+      title: item.title,
+      description: item.description,
+      link: item.url,
+      pubDate: item.date,
+    })),
+    // Optional: Customize where the file is written to.
+    // Otherwise, defaults to "/rss.xml"
+    dest: "/posts/feed.xml",
+  });
+  // Return your paths
+  return sortedPosts;
+  }
+---
+<!-- <MainLayout title="trainingmontage — all posts">
+  <section class="post-list flow">
+        {posts.map((post) => <BlogPreview post={post} />)}
+    </section>
+</MainLayout> -->
