@@ -19,10 +19,10 @@
     // The list of items for your RSS feed, sorted.
     items: sortedPosts.map(item => ({
       title: item.title,
-      description: item.description,
       link: item.url,
       pubDate: item.date,
-      customData: `<content><![CDATA[${item.content.html}]]></content>`
+      author: 'Jeff Caldwell',
+      description: item.content.html
     })),
     // Optional: Customize where the file is written to.
     // Otherwise, defaults to "/rss.xml"

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="/feed.xsl" type="text/xsl"?><rss version="2.0"><channel><title><![CDATA[Trainingmontage — Web Dev & Writing]]></title><description><![CDATA[I make cool things for the web and write about what I learn.]]></description><link>https://trainingmontage.dev/</link><language>en-us</language><item><title><![CDATA[CS Basics: Converting Between Different Bases]]></title><link>https://trainingmontage.dev/posts/cs-basics-converting-between-different-bases/</link><guid>https://trainingmontage.dev/posts/cs-basics-converting-between-different-bases/</guid><description><![CDATA[Now that we've covered the basic numeral systems, it's time to learn how to convert from one to another.]]></description><pubDate>Wed, 06 Oct 2021 07:16:00 GMT</pubDate><content><![CDATA[<div class="toc">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="/feed.xsl" type="text/xsl"?><rss version="2.0"><channel><title><![CDATA[Trainingmontage — Web Dev & Writing]]></title><description><![CDATA[I make cool things for the web and write about what I learn.]]></description><link>https://trainingmontage.dev/</link><language>en-us</language><item><title><![CDATA[CS Basics: Converting Between Different Bases]]></title><link>https://trainingmontage.dev/posts/cs-basics-converting-between-different-bases/</link><guid>https://trainingmontage.dev/posts/cs-basics-converting-between-different-bases/</guid><description><![CDATA[<div class="toc">
   <div class="flow">
     <p>
       This post is the 4th in a series about basic concepts in programming and Computer Science. You can find all the posts in the series below.
@@ -161,7 +161,7 @@ Now, when we move up it gets just a little more complicated because each success
 <p>Bin: <code data-astro-raw>00111</code>, <code data-astro-raw>01101</code></p>
 <p>Decimal: <code data-astro-raw>7</code>, <code data-astro-raw>13</code></p>
 <p>Hex: <code data-astro-raw>7</code>, <code data-astro-raw>D</code></p>
-<p>That’s it for binary/hex conversions! Tune in soon for bitwise operators and bit shifting!</p>]]></content></item><item><title><![CDATA[CS Basics: Detour - Nibbles, MSB, and LSB]]></title><link>https://trainingmontage.dev/posts/cs-basics-detour--nibbles-msb-and-lsb/</link><guid>https://trainingmontage.dev/posts/cs-basics-detour--nibbles-msb-and-lsb/</guid><description><![CDATA[We're taking a quick detour to talk about an important concept when dealing with binary numbers — the Most Significant Bit, and the Least Significant Bit.]]></description><pubDate>Tue, 05 Oct 2021 05:09:49 GMT</pubDate><content><![CDATA[<div class="toc">
+<p>That’s it for binary/hex conversions! Tune in soon for bitwise operators and bit shifting!</p>]]></description><pubDate>Wed, 06 Oct 2021 07:16:00 GMT</pubDate></item><item><title><![CDATA[CS Basics: Detour - Nibbles, MSB, and LSB]]></title><link>https://trainingmontage.dev/posts/cs-basics-detour--nibbles-msb-and-lsb/</link><guid>https://trainingmontage.dev/posts/cs-basics-detour--nibbles-msb-and-lsb/</guid><description><![CDATA[<div class="toc">
   <div class="flow">
     <p>
       This post is the 3rd in a series about basic concepts in programming and Computer Science. You can find all the posts in the series below.
@@ -368,7 +368,7 @@ Now, when we move up it gets just a little more complicated because each success
 </table>
 <p>Usually the LSB is shown at the first position, in our case that’s all the way to the right. The MSB is shown in the last position, or all the way on the left. There are some differences in the way some processors have handled this but we don’t need to get into that for this post.</p>
 <p>That’s it for nibbles, LSB, and MSB! We can get into converting between different bases on the next post.</p>
-<p>After that, I’ll write about using bitwise operators with our different numbering systems so we can take full advantage of our newfound knowledge.</p>]]></content></item><item><title><![CDATA[CS Basics: Hex and 32 bit Conversion]]></title><link>https://trainingmontage.dev/posts/cs-basics-hex-and-32-bit-conversion/</link><guid>https://trainingmontage.dev/posts/cs-basics-hex-and-32-bit-conversion/</guid><description><![CDATA[Once you have a handle on basic numeral systems like binary, it's time to move on to more complicated systems. We'll cover hexadecimal and 32 bit numbers in the second CS Basics post.]]></description><pubDate>Mon, 04 Oct 2021 15:06:01 GMT</pubDate><content><![CDATA[<div class="toc">
+<p>After that, I’ll write about using bitwise operators with our different numbering systems so we can take full advantage of our newfound knowledge.</p>]]></description><pubDate>Tue, 05 Oct 2021 05:09:49 GMT</pubDate></item><item><title><![CDATA[CS Basics: Hex and 32 bit Conversion]]></title><link>https://trainingmontage.dev/posts/cs-basics-hex-and-32-bit-conversion/</link><guid>https://trainingmontage.dev/posts/cs-basics-hex-and-32-bit-conversion/</guid><description><![CDATA[<div class="toc">
   <div class="flow">
     <p>
       This post is the 2nd in a series about basic concepts in programming and Computer Science. You can find all the posts in the series below.
@@ -579,7 +579,7 @@ Two digits can represent 256 unique numbers. If you’ve used hex colors, you’
     }
   }
 </script>
-<p>Next time we’ll go over converting from one non-decimal base, like binary, to another base, like hex.</p>]]></content></item><item><title><![CDATA[CS Basics: Binary Conversion]]></title><link>https://trainingmontage.dev/posts/cs-basics-binary-conversion/</link><guid>https://trainingmontage.dev/posts/cs-basics-binary-conversion/</guid><description><![CDATA[Understanding how to convert numbers to and from binary, or any numeric base, is a fundamental concept in programming and computer science. Let's get a grip on those fundamentals!]]></description><pubDate>Sat, 02 Oct 2021 11:25:05 GMT</pubDate><content><![CDATA[<div class="toc">
+<p>Next time we’ll go over converting from one non-decimal base, like binary, to another base, like hex.</p>]]></description><pubDate>Mon, 04 Oct 2021 15:06:01 GMT</pubDate></item><item><title><![CDATA[CS Basics: Binary Conversion]]></title><link>https://trainingmontage.dev/posts/cs-basics-binary-conversion/</link><guid>https://trainingmontage.dev/posts/cs-basics-binary-conversion/</guid><description><![CDATA[<div class="toc">
   <div class="flow">
     <p>
       This post is the 1st in a series about basic concepts in programming and Computer Science. You can find all the posts in the series below.
@@ -1254,4 +1254,4 @@ And that lands us in a good spot because
 </tr>
 </tbody>
 </table>
-<p>Okay, that’s it for the basic number conversions. Next time we’ll cover hexadecimal and 32 bit conversions.</p>]]></content></item></channel></rss>
+<p>Okay, that’s it for the basic number conversions. Next time we’ll cover hexadecimal and 32 bit conversions.</p>]]></description><pubDate>Sat, 02 Oct 2021 11:25:05 GMT</pubDate></item></channel></rss>
