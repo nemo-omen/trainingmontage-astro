@@ -6,7 +6,8 @@
 
   export async function getStaticPaths({rss}) {
     const posts = Astro.fetchContent('./**/*.md');
-    const sortedPosts = posts.sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
+    const filtered = posts.filter((post) => post.draft !== true);
+    const sortedPosts = filtered.sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
 
     rss({
     // The RSS Feed title, description, and custom metadata.
