@@ -11,10 +11,10 @@
 
     rss({
     // The RSS Feed title, description, and custom metadata.
-    title: 'Don\'s Blog',
+    title: 'Trainingmontage — Web Dev & Writing',
     // See "Styling" section below
     stylesheet: true,
-    description: 'An example blog on Astro',
+    description: 'I make cool things for the web and write about what I learn.',
     customData: `<language>en-us</language>`,
     // The list of items for your RSS feed, sorted.
     items: sortedPosts.map(item => ({
@@ -25,7 +25,7 @@
     })),
     // Optional: Customize where the file is written to.
     // Otherwise, defaults to "/rss.xml"
-    dest: "/posts/feed.xml",
+    dest: "/posts/feed/index.xml",
   });
   // Return your paths
   return sortedPosts;
