@@ -22,10 +22,11 @@
       description: item.description,
       link: item.url,
       pubDate: item.date,
+      content: item.content.html
     })),
     // Optional: Customize where the file is written to.
     // Otherwise, defaults to "/rss.xml"
-    dest: "/posts/feed/index.xml",
+    dest: "/feed.xml",
   });
   // Return your paths
   return sortedPosts;
